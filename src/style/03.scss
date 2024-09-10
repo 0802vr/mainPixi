@@ -1,0 +1,123 @@
+@import 'variables';
+.section03 {
+    margin-top: 180px;
+}
+
+.section03_box {
+    display: flex;
+}
+.section03_box_title {
+    width: 460px;     
+    font: 400 32px / 1.1 $fontF, Helvetica, Arial, serif;
+    color: rgb(112, 112, 112);
+    text-align: justify;
+    letter-spacing: -0.96px;
+    flex: 0 0 460px;
+}
+.section03_box_text {
+    width: 100%;
+    font: 400 40px / 90% $fontF, Helvetica, Arial, serif;     
+    text-transform: uppercase; 
+    color: rgb(254, 254, 254);
+    flex: 1;
+}
+.section03_itemsPlayers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.playerBoxContainer {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 90px;
+     
+}
+.playerBox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: -90px;
+
+    &Active {
+        z-index: 2;
+        /* margin-left: 0; */
+        .playerBoxRow {
+            display: block;
+        }
+        .playerItemsImageBack {
+             min-width: 440px;
+             min-height: 440px;
+        }
+        .playerItemsImageMain {
+            min-width: 440px;
+            min-height: 440px;
+             
+        }
+        .playerBoxRow {
+            margin-top: 50px;
+        }
+    }
+    /* &:nth-child(n + 2) {
+        margin-left: -100px;
+    }
+   */
+    &:nth-child(2n) {
+        z-index: 1;
+    }
+}
+.playerBoxTriagleTop {
+    width: 20px;
+    height: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.playerItems {
+}
+.playerItemsImages {
+    position: relative;
+}
+.playerItemsImageBack {
+    min-width: 320px;
+    min-height: 320px;
+}
+.playerItemsImageMain {
+    min-width: 320px;
+    min-height: 320px;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+}
+.playerBoxRow {
+    display: none;
+    margin-top: 15px;
+    max-width: 428px;
+    margin-left: 40px;
+    width: 320px;
+   
+}
+.playerBoxCol {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.playerBoxTitle {    
+    font: 400 32px / 1.2 $fontF, Helvetica, Arial, serif;
+    color: rgb(254, 254, 254);
+    letter-spacing: -0.2px;
+}
+.playerBoxText {
+    width: 80%;
+    font: 500 18px / 1.2 $fontR, Helvetica, Arial, serif;
+    color: rgb(112, 112, 112);
+}
+.playerBoxNum {
+    
+    font: 400 32px / 1.2 $fontF, Helvetica, Arial, serif;
+    color: rgb(254, 254, 254);
+}
+.playerBoxTriagleBottom {
+    width: 20px;
+    height: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}

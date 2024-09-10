@@ -1,0 +1,267 @@
+@import 'variables';
+.main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(18 18 18);
+    overflow: hidden;
+   
+  }
+
+.sectionMainMargin {
+  /* max-width: 1400px; */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+   
+} 
+.section01 {   
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(2230px * 1vw/14px);   
+  z-index: 1;
+}
+.section01MainImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.section01Nav {
+  display: flex; 
+  align-items: center;  
+  margin-top: 30px;
+}
+.section01NavLogo {  
+    font: 400 46px /1 $fontF;
+    color: rgb(254, 254, 254);
+    letter-spacing: -1.38px;     
+    min-width: 460px;
+    cursor: pointer;
+     
+}
+.section01NavBox {
+  display: flex;
+  align-items: end;
+  width: 620px;
+  justify-content: space-between;
+  cursor: pointer;
+  
+}
+.section01NavBoxLeft {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 8px;
+}
+.collectionsBox {
+  display: flex;
+  gap: 6px;
+}
+.collectionsButton {
+  
+  font: 500 18px / 1 $fontF;
+  color: rgb(254, 254, 254);
+  letter-spacing: -0.54px;
+}
+.collectionsImage {
+  width: 9px;
+  height: 9px;
+  margin: 5px 0 4px;
+}
+.whitePaperButton {
+  font: 500 18px / 1 $fontF;
+  color: rgb(254, 254, 254);
+  letter-spacing: -0.54px;
+}
+.blogButton {
+  font: 500 18px / 1 $fontF;
+  color: rgb(254, 254, 254);
+  letter-spacing: -0.54px;
+  cursor: pointer;
+}
+
+.section01NavBoxRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+   
+}
+.playerName {
+  margin: 0 14px 0 0;
+  width: 100px;
+  height: 16px;
+  font: 500 16px/1 $fontR;
+  color: rgb(254, 254, 254);
+}
+.playerIdSection {
+  display: flex;
+  gap: 0 6px;
+}
+.playerImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+.playerIdImage {
+  margin: 3px 0 4px;
+  width: 10px;
+  height: 10px;
+
+}
+.playerIdText {   
+  font: 400 14px / 1.2 $fontR, Helvetica, Arial, serif;
+  color: rgb(112, 112, 112);
+}
+.section01NavBtn {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  width: 240px;
+  height: 40px;
+  border-radius: 4px;
+  outline: 1px solid rgb(254, 254, 254);
+  outline-offset: -1px;
+  cursor: pointer;
+}
+.group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 4px 4px 0;
+}
+.rect4 {
+  position: relative;
+  min-height: 36px;
+  background-color: rgb(254, 254, 254);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.playPeexiButton {
+   
+  font: 500 16px/1.2 $fontR, Helvetica, Arial, serif;
+  color: rgb(18, 18, 18);
+  letter-spacing: -0.48px;
+}
+.section01MainTitle {
+   
+  text-transform: uppercase;
+  font: 400 269px / 1 $fontF, Helvetica, Arial, serif;
+  color: rgb(254, 254, 254);
+  margin-top: 33px;
+}
+.section01MainSubtitle {   
+    width: 512px;     
+    font: 500 20px / 1.2 $fontR, Helvetica, Arial, serif;
+    color: rgb(254, 254, 254);
+    margin-top: -50px;
+}
+.section01MainBtnPlay {  
+  width: 410px;
+  height: 44px;
+  border-radius: 4px;
+  outline: 1px solid rgb(254, 254, 254);
+  outline-offset: -1px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.section01MainBtnPlayBox {  
+  margin: 0 4px 4px 0;
+}
+.section01MainBtnPlayBoxRect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  background-color: rgb(254, 254, 254);
+  border-radius: 4px;
+} 
+.section01MainBtnPlayBoxBtn {
+  font: 500 16px/1.2 $fontR, Helvetica, Arial, serif;
+  color: rgb(18, 18, 18);
+  letter-spacing: -0.48px;
+}
+.aboutProjectCont {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column; 
+  width: 630px;
+  margin-left: 460px;
+  margin-bottom: 197px;
+}
+.aboutProjectHeading {   
+  font: 400 36px/1.1 $fontF, Helvetica, Arial, serif;
+  text-transform: uppercase;
+  color: rgb(254, 254, 254);
+  letter-spacing: -1.08px;
+}
+.joinExploreSection {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  margin: 2px 0 0;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.joinExploreSubtitle {   
+  font: 500 20px/1.2 $fontR, Helvetica, Arial, serif;
+  color: rgb(112, 112, 112);
+  padding-bottom: 2px;
+}
+.joinExploreSubtitleActive {   
+  color: rgb(254, 254, 254);
+  border-bottom: 2px #fff solid;
+}
+ 
+.rectWhoWeAreSection {
+  width: 630px;
+  height: 340px;
+  background-color: rgb(56, 56, 56);
+  border-radius: 10px;
+}
+.worldDescription {
+  margin: 16px 0 0;
+  width: 630px;
+  height: 44px;
+  font: 400 18px/1.2 $fontR, Helvetica, Arial, serif;
+  color: rgb(254, 254, 254);
+}
+.aboutProjectBox {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+.aboutProjectBoxElement {
+  display: flex;
+  gap: 11px;
+  
+}
+.rectAdventureSection {
+  margin-top: 7px;
+  width: 4px;
+  height: 4px;
+  background-color: rgb(254, 254, 254);
+}
+.aboutProjectBoxElementText { 
+  font: 400 18px/1.2 $fontR, Helvetica, Arial, serif;
+  color: rgb(254, 254, 254);
+   
+}
+@media (min-width:1441px) {
+  .sectionMainMargin {
+    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: calc(40px + 1vw);
+    padding-right: calc(40px + 1vw);
+  }
+}

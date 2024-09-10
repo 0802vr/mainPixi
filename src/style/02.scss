@@ -1,0 +1,119 @@
+@import 'variables';
+.section02 {
+ /*  display: none; */
+  position: relative;
+  height: calc(2230px * 1vw/14px);
+  width: 100%;
+  z-index: 1;
+}
+.section02MainImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.section02Title {
+  font-family: $fontF;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-align: justify;
+  color: #fff;
+  position: relative;
+  span {
+    color: #121212;
+    background-color: #34d3d7;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+.section02Title1 {
+  margin-top: 318px;
+  text-indent: 460px;
+
+}
+.section02Title2{
+  margin-left: 50%;
+  margin-bottom: 140px;
+}
+.mainCharacterImage {
+  position: absolute;
+  top: -14px;
+  left: 0;
+}
+.mainCharacterImage2 {
+  position: absolute;
+  bottom: -38px;
+  right: 0;
+}
+.planetBox {
+  display: flex;
+  align-items: center;
+}
+.planetBox_second {
+  margin-top: 140px;
+}
+.planetBoxImgCont {
+  width: 50%;
+  .planetBoxImg {
+    height: 500px;
+    width: 500px;
+  }
+}
+.planetDescriptionSection {
+  width: 50%;
+  
+}
+.planetNameSection {
+}
+.planetNameSubtitle {
+   
+    font: 400 20px / 1 $fontF, Helvetica, Arial, serif;
+    color: rgb(52, 211, 215);
+    letter-spacing: -0.6px;
+}
+.planetTitle {
+      
+  font: 400 40px / 1 $fontF, Helvetica, Arial, serif;
+  color: rgb(254, 254, 254);
+  letter-spacing: -1.2px;
+}
+.planetHighlightText {
+  margin: 5px 0 0;   
+  font: 400 18px / 1.1 $fontR, Helvetica, Arial, serif;
+  color: rgb(254, 254, 254);
+  letter-spacing: -0.54px;
+}
+.planetBoxPresentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+.planetBoxRow {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+   
+}
+.planetBoxCol {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+
+}
+.planetBoxSubtitle {   
+  font: 400 20px / 1 $fontF, Helvetica, Arial, serif;
+  color: rgb(52, 211, 215);
+  letter-spacing: -0.6px;
+}
+.planetBoxText {
+   
+  font: 400 48px / 1 $fontF, Helvetica, Arial, serif;
+  color: rgb(254, 254, 254);
+   
+  letter-spacing: -1.44px;
+}
