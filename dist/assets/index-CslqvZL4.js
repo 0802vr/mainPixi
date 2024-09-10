@@ -4,4 +4,4 @@
                     <p class="aboutProjectBoxElementText">${a}</p>
                 </div>
             `).join("")})})});document.addEventListener("DOMContentLoaded",function(){const i=new G(".swiper-container",{loop:!0,slidesPerView:5,centeredSlides:!0,slideToClickedSlide:!0});i.on("slideChange",function(){const t=document.querySelectorAll(".playerBox");t.forEach(e=>e.classList.remove("playerBoxActive")),t[i.activeIndex].classList.add("playerBoxActive")})});
-//# sourceMappingURL=index-BTROk68t.js.map
+//# sourceMappingURL=index-CslqvZL4.js.map
