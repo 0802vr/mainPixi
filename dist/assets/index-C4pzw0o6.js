@@ -3,5 +3,5 @@
                     <div class="rectAdventureSection"></div>
                     <p class="aboutProjectBoxElementText">${a}</p>
                 </div>
-            `).join("")})})});document.addEventListener("DOMContentLoaded",function(){const i=new G(".swiper-container",{loop:!0,spaceBetween:-90,speed:500,slidesPerView:5,centeredSlides:!0,grabCursor:!0});i.on("slideChange",function(){const t=document.querySelectorAll(".playerBox");t.forEach(s=>s.classList.remove("playerBoxActive"));const e=i.activeIndex;t[e].classList.add("playerBoxActive"),e>=0&&e<t.length&&(t[e].style.zIndex="3"),e-1>=0&&(t[e-1].style.zIndex="2"),e-2>=0&&(t[e-2].style.zIndex="1"),e+1<t.length&&(t[e+1].style.zIndex="2"),e+2<t.length&&(t[e+2].style.zIndex="1",t[e+2].style.opacity="1"),e+3<t.length&&(t[e+3].style.opacity="0")})});
-//# sourceMappingURL=index-Chy-8_0_.js.map
+            `).join("")})})});document.addEventListener("DOMContentLoaded",function(){const i=new G(".swiper-container",{loop:!0,spaceBetween:-90,speed:500,slidesPerView:5,centeredSlides:!0,grabCursor:!0});i.on("slideChange",function(){const t=document.querySelectorAll(".playerBox");t.forEach(s=>s.classList.remove("playerBoxActive"));const e=i.activeIndex;t[e].classList.add("playerBoxActive"),e>=0&&e<t.length&&(t[e].style.zIndex="4"),e-1>=0&&(t[e-1].style.zIndex="3"),e-2>=0&&(t[e-2].style.zIndex="2"),e+1<t.length&&(t[e+1].style.zIndex="3"),e+2<t.length&&(t[e+2].style.zIndex="2"),e+3<t.length&&(t[e+3].style.zIndex="1"),e-3<t.length&&(t[e-3].style.zIndex="1")})});
+//# sourceMappingURL=index-C4pzw0o6.js.map
