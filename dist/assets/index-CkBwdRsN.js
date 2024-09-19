@@ -20,4 +20,4 @@
                 </div>
             </div>
         `,i&&s.classList.add("playerBoxActive"),s.addEventListener("click",()=>I(a)),g.appendChild(s)}},I=t=>{t!==c&&(console.log(t,c),c=t,v())};v();if(window.innerWidth<980){const t=document.querySelectorAll(".section05Col");t.forEach(n=>{n.addEventListener("click",()=>{t.forEach(o=>{o.classList.remove("section05ColActive")}),n.classList.add("section05ColActive")})})}const l=document.querySelectorAll(".section05Col");let y=0;l.forEach(t=>{t.addEventListener("mouseenter",()=>{var n;t!==((n=t.parentNode)==null?void 0:n.lastElementChild)&&(l[y].classList.remove("section05ColActive"),t.classList.add("section05ColActive"),y=Array.from(l).indexOf(t))})});
-//# sourceMappingURL=index-ChP5FGmT.js.map
+//# sourceMappingURL=index-CkBwdRsN.js.map
