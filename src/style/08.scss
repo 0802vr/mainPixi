@@ -1,8 +1,9 @@
 @import 'variables';
+@import 'adapt';
 .section08 {
     display: flex;
     flex-direction: column;
-    gap: 36px;
+    gap: adaptive-margin(36,30);
     margin-top: 200px;
     margin-bottom: 200px;
 }
@@ -10,21 +11,23 @@
     display: flex;
 }
 .section08Title {
+    cursor: url('../assets/cursor/1.png'), default;
     color: #707070;
     text-align: justify;
     font-family: $fontF;
-    font-size: 32px;
+    font-size: adaptive-margin(32,42);
     font-style: normal;
     font-weight: 400;
     line-height: 110%; /* 35.2px */
     letter-spacing: -0.96px;
-    width: 460px;
+    width: adaptive-margin(460, 614);
 }
 .section08FirstText {
+    cursor: url('../assets/cursor/1.png'), default;
     flex: 1;
     color: #FEFEFE;     
     font-family: $fontF;
-    font-size: 40px;
+    font-size: adaptive-margin(40,52);
     font-style: normal;
     font-weight: 400;
     line-height: 90%; /* 36px */
@@ -38,30 +41,108 @@
 .section08SecondBox {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1px;
+    /* gap: 1px; */
 }
 .section08Card {
-     
-    outline: 1px solid #404040;
-    padding: 30px;
-    height: 400px;
+    cursor: url('../assets/cursor/2.png'), pointer;
+    /* outline: 1px solid #404040; */
+    padding: adaptive-margin(30,40);
+    height: adaptive-margin(400,461);
     display: flex;
     flex-direction: column;
+    transition: all 0.4s linear;
+    border:1px solid #404040;
+    margin-top: -1px;
+    .section08CardText {
+        height: adaptive-margin(80,97);
+    }
+    &:nth-child(6){
+        .section08CardText {
+            height: adaptive-margin(100,121);
+        }
+        /* padding-bottom: adaptive-margin(49,61); */
+
+    }
+    &:nth-child(7){
+        .section08CardText {
+            height: adaptive-margin(100,121);
+        }
+        /* padding-bottom: adaptive-margin(49,61); */
+
+    }
+    &:nth-child(8){
+        .section08CardText {
+            height: adaptive-margin(100,121);
+        }
+    }
+    &:nth-child(9){
+        .section08CardText {
+            height: adaptive-margin(100,121);
+        }
+    }
+    &:nth-child(10){
+        .section08CardText {
+            height: adaptive-margin(100,121);
+        }
+    }
+        /* padding-bottom: adaptive-margin(49,61); */
+
+    
+    &:nth-child(2n) {
+        margin-left: -1px;
+      
+    }
+    &:nth-child(7) {
+        margin-left: -1px;
+      
+    }
     &:last-child {
         .section08CardImg {
-            margin-left: -15px;
+            margin-left: adaptive-margin(-15, -21);
+            margin-bottom: 2px;
         }
     }
 }
+ 
+.section08Card:not(.section08CardSoon) {
+    
+    &:hover {
+        /* outline: 1px solid #34D3D7; */
+        border:1px solid #34D3D7;
+        z-index: 2;
+        .section08CardElements::after {
+            right: 0;
+        }
+        .section08CardTitle {
+            color: #34D3D7;
+        }
+        .section08CardImgSvg {
+            rotate: -90deg;
+            path {
+                fill: #34D3D7;
+            }
+        }
+        .section08CardText {
+            color: #FEFEFE;
+        }
+    }
+   
+}
+.section08CardSoon {
+    cursor: url('../assets/cursor/1.png'), default;
+}
 .section08CardOpacity {
     opacity: 0;
+    cursor: url('../assets/cursor/1.png'), default;
+    
 }
 .section08CardBox {
+    /* padding-bottom: 150px; */
 }
 .section08CardNum {
     color:  #34D3D7;
     font-family: $fontF;
-    font-size: 24px;
+    font-size: adaptive-margin(24,30);
     font-style: normal;
     font-weight: 400;
     line-height: 100%; /* 24px */
@@ -72,11 +153,27 @@
 .section08CardElements {
     display: flex;
     align-items: flex-end;
+    width: fit-content;
+    position: relative;
 }
+ 
+
+.section08CardElements::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -2px;
+    height: 1px;
+    background: #34D3D7;
+    transition: right 0.4s ease-in-out;
+}
+
+
 .section08CardTitle {
     color: #FEFEFE;
     font-family: $fontF;
-    font-size: 38px;
+    font-size: adaptive-margin(38,48);
     font-style: normal;
     font-weight: 400;
     line-height: 90%; /* 34.2px */
@@ -85,18 +182,102 @@
     margin-right: 8px;
     width: min-content;
     min-width: 73px;
+    transition: all 0.4s linear;
+}
+.section08CardSubtitle {
+    color: #707070;
+    font-family: $fontF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 24px */
+    letter-spacing: -0.72px;
+    text-transform: uppercase;
 }
 .section08CardImg {
-    margin-bottom: 5px;
+    margin-bottom: adaptive-margin(2,5);
     flex-grow: 1
+}
+.section08CardImgSvg {
+     transition: all 0.4s linear;
+     width: adaptive-margin(24,29);
+     height: adaptive-margin(24,29);
+     path {
+        transition: all 0.4s linear;
+     }
 }
 .section08CardText {
     color: #707070;
     font-family: $fontR;
-    font-size: 18px;
+    font-size: adaptive-margin(18,22);
     font-style: normal;
     font-weight: 400;
     line-height: 110%; 
     letter-spacing: -0.54px;
     margin-top: auto;
+    transition: all 0.4s linear;
+}
+@media (min-width:1440px) and (max-width:1540px) {
+    .section08Card {
+         
+        
+         
+        &:nth-child(9){
+            .section08CardText {
+                height: 121px;
+            }
+        }
+        &:nth-child(10){
+            .section08CardText {
+                height: 121px;
+            }
+        }
+    }
+}
+@media (max-width:1440px) {
+    .section08Card {
+        .section08CardText {
+            font-size: 18px;
+            height: 116px;
+        }
+        &:nth-child(6){
+            .section08CardText {
+                height: 116px;
+            }
+            /* padding-bottom: adaptive-margin(49,61); */
+    
+        }
+        &:nth-child(7){
+            .section08CardText {
+                height: 116px;
+            }
+            /* padding-bottom: adaptive-margin(49,61); */
+    
+        }
+        &:nth-child(8){
+            .section08CardText {
+                height: 116px;
+            }
+        }
+        &:nth-child(9){
+            .section08CardText {
+                height: 116px;
+            }
+        }
+        &:nth-child(10){
+            .section08CardText {
+                height: 116px;
+            }
+        }
+    
+    
+}
+}
+@media (max-width:1250px) {
+    .section08Title {
+        font-size: 28px;
+    }
+    .section08FirstText {
+        font-size: 32px;
+    }
 }

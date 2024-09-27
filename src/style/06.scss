@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'adapt';
 .section06 {
     margin-bottom: 200px;
     display: flex;
@@ -11,8 +12,10 @@
     display: flex;
 }
 .section06BoxFirstTitle {
-    width: 460px;
+    cursor: url('../assets/cursor/1.png'), default;
+    width: adaptive-margin(460, 614);
     font: 400 32px / 1.1 $fontF, Helvetica, Arial, serif;
+    font-size: adaptive-margin(32,42);
     color: rgb(112, 112, 112);     
     letter-spacing: -0.96px;
 }
@@ -20,13 +23,14 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: adaptive-margin(15,20);
 }
 .section06Subtext {
+    cursor: url('../assets/cursor/1.png'), default;
     color:  #FEFEFE;
     text-align: justify;
     font-family: $fontF;
-    font-size: 40px;
+    font-size: adaptive-margin(40,52);
     font-style: normal;
     font-weight: 400;
     line-height: 90%; /* 36px */
@@ -39,59 +43,118 @@
 }
 .section06BoxFirstItemElements {
     display: flex;
-    gap: 40px;
+    gap: adaptive-margin(40,50);
+    width: 87%;
 }
 .section06BoxLeft {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: adaptive-margin(10,15);
+    width: 51%;
 }
 .section06Text {
     color: #707070;
     font-family: $fontR;
-    font-size: 18px;
+    font-size: adaptive-margin(18,24);
     font-style: normal;
     font-weight: 400;
     line-height: 110%; /* 19.8px */
     letter-spacing: -0.54px;
+    cursor: url('../assets/cursor/1.png'), default;
 }
 .section06BoxRight {
     display: flex;
     flex-direction: column;
+    width: 49%;
 }
 .section06LinkBox {
     margin-top: auto;
     display: flex;
     justify-content: space-between;
-    color:  #34D3D7;
+    color:  #FEFEFE;
     font-family: $fontF;
-    font-size: 20px;
+    font-size: adaptive-margin(20,28);
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 26px */
     letter-spacing: -0.6px;
-    border-bottom: 1px solid #34D3D7;
-    width: 300px;
+    border-bottom: 1px solid #FEFEFE;
+    width: adaptive-margin(300,400);
+    transition: all 0.4s linear;
+    &:hover {
+        border-bottom: 1px solid #34D3D7;
+        color:  #34D3D7;
+        .section06LinkImg {
+            rotate: -90deg;
+            path {
+                fill: #34D3D7;
+            }
+        }
+    }
 }
 .section06Link {
+    margin-bottom: -2px;
+    font-family: $fontF;
+    font-size: adaptive-margin(22,28);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 26px */
+    letter-spacing: -0.6px;
 }
 .section06LinkImg {
+    rotate: 0deg;
+    margin-top: 3px;
+    transition: all 0.4s linear;
+    width: adaptive-margin(18,24);
+    height: adaptive-margin(18,24);
+    path{
+        transition: all 0.4s linear;
+    }
 }
 .section06BoxSecond {
     display: flex;
 }
 .section06BoxSecondItemImg {
-    width: 460px;
+    width: adaptive-margin(460, 614);
+    img {
+        width: adaptive-margin(250,300);
+        height: adaptive-margin(250,300);
+    }
+}
+.section06BoxSecondItemImg2{
+    flex:1;
+    img {
+        width: 87%;
+    }
 }
 .section06BoxSecondText {
     color: #707070;
     text-align: justify;
     font-family: $fontR;
-    font-size: 16px;
+    font-size: adaptive-margin(16,20);
     font-style: normal;
     font-weight: 500;
     line-height: 110%; /* 17.6px */
     letter-spacing: -0.48px;
     text-transform: uppercase;
-    margin-top: 10px;
+    margin-top: adaptive-margin(10,12);
+    cursor: url('../assets/cursor/1.png'), default;
+}
+@media (max-width:1250px) {
+    .section06BoxFirstTitle{
+        font-size: 28px;
+    }
+    .section06Subtext {
+        font-size: 32px;
+    }
+    .section06Text {
+        font-size: 18px;
+    }
+    .section06LinkBox {
+        font-size: 20px;
+        width: 100%;
+    }
+    .section06BoxSecondText {
+        font-size: 16px;
+    }
 }

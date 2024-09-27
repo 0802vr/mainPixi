@@ -1,0 +1,203 @@
+@import 'variables';
+@import 'adapt';
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #202020;
+    
+}
+.footerRoad {
+}
+.footerRow {
+    background: #202020;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    &:last-child{
+        padding-bottom: 30px;
+        align-items: end;
+        cursor: url('../assets/cursor/2.png'), pointer;
+    }
+}
+
+.footerLeft {
+}
+.footerLogo {
+    display: flex;
+    gap: adaptive-margin(28,35);
+}
+.footerLogoSvg1 {
+    width: adaptive-margin(292,365);
+    height: adaptive-margin(72,90);
+}
+.footerLogoSvg2{
+    width: adaptive-margin(240,300);
+    height: adaptive-margin(72,90);
+
+}
+.footerLogoText {
+    color: #FEFEFE;
+    font-family: $fontR;
+    margin: adaptive-margin(26,30) 0 10px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 20px */
+    letter-spacing: -0.6px;
+    cursor: url('../assets/cursor/1.png'), default;
+}
+.footerLogoConnect {
+    display: flex;
+    gap: 16px;
+    cursor: url('../assets/cursor/2.png'), pointer;
+}
+.footerLogoConnectBtn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #404040;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s linear;
+    svg {
+        path {
+            transition: all 0.4s linear;
+        }
+    }
+    &:hover {
+        background-color: #FEFEFE;
+        svg {
+            path {
+                fill: #121212;
+            }
+        }
+    }
+}
+.footerRight {
+    display: flex;
+    width: 50%;
+    gap: adaptive-margin(115,196);
+}
+.footerRightBoxStart {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 130px;
+}
+.footerRightBoxTitle {
+    color: #FEFEFE;
+    font-family: $fontR;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 20px */
+    letter-spacing: -0.6px;
+    cursor: url('../assets/cursor/1.png'), default;
+    
+}
+.footerRightBoxLink {
+    color:  #707070;
+    font-family: $fontR;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s linear;
+     
+    &:hover {
+        gap: 5px;
+        color: #FEFEFE;
+        .footerLinkIcon {
+            width: adaptive-margin(5,8);
+            height: adaptive-margin(5,8);
+            opacity: 1;
+        }
+    }
+}
+.footerLinkIcon {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+.footerRightBoxCenter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 119px;
+}
+.footerRightBoxEnd {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 117px;
+}
+.footerLabel {
+    display: flex;
+    gap: 5px;
+}
+.footerLabelText {
+    color:  #707070;
+    font-family: $fontR;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin-top: 1px; /* 21.6px */
+}
+.footerDoc {
+    display: flex;
+    gap: 10px;
+}
+.footerPrivacy {
+    color: #707070;
+    font-family: $fontR;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 19.2px */
+    text-transform: uppercase;
+    transition: color 0.2s linear;
+    &:hover {
+        color: #FEFEFE;
+    }
+}
+.footerPrivacyLine {
+    color: #707070;
+    font-family: $fontR;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 19.2px */
+    text-transform: uppercase;
+}
+.footerPrivacyTerms {
+    color: #707070;
+    font-family: $fontR;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 19.2px */
+    text-transform: uppercase;
+    transition: color 0.2s linear;
+    &:hover {
+        color: #FEFEFE;
+    }
+}
+.footerLogoYanstoke {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.footerLogoYanstokeText {
+    color: #707070;
+    font-family: $fontR;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 16.8px */
+    margin-top: 4px;
+}

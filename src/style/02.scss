@@ -1,43 +1,68 @@
 @import 'variables';
+@import 'adapt';
 .section02 {
  /*  display: none; */
+  background-color: #ffffff8c;
   position: relative;
   height: calc(2230px * 1vw/14px);
   width: 100%;
-  z-index: 1;
+  z-index: 0;
+  cursor: url('../assets/cursor/1.png'), default;
 }
 .section02MainImg {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  /* display: none; */
+ /*  z-index: -1; */
   top: 0;
   left: 0;
 }
 .section02Title {
   font-family: $fontF;
   font-weight: 400;
-  font-size: 40px;
+  font-size: adaptive-margin(40, 54);
   line-height: 100%;
   text-transform: uppercase;
   text-align: justify;
   color: #fff;
   position: relative;
-  span {
-    color: #121212;
-    background-color: #34d3d7;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
+  
+}
+.section02Title::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+.spanBack {
+  color: #121212;
+  background-color: #34d3d7;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.span2Section {
+  margin-top: adaptive-margin(-40, -54);
+  margin-left: 50%;
+  width: 50%;
+  text-indent: 0;
+  font-family: $fontF;
+  font-weight: 400;
+  font-size: adaptive-margin(40, 54);
+  line-height: 100%;
+  text-transform: uppercase;
+  text-align: justify;
+  color: #fff;
+  position: relative;
 }
 .section02Title1 {
+  margin-top: 30px;
   margin-top: 318px;
-  text-indent: 460px;
+  text-indent: adaptive-margin(460,614);
 
 }
 .section02Title2{
   margin-left: 50%;
-  margin-bottom: 140px;
+  margin-bottom: adaptive-margin(140,200);
 }
 .mainCharacterImage {
   position: absolute;
@@ -52,15 +77,19 @@
 .planetBox {
   display: flex;
   align-items: center;
+  z-index: 1;
+  position: relative;
 }
 .planetBox_second {
-  margin-top: 140px;
+  margin-top: adaptive-margin(160, 200);
 }
 .planetBoxImgCont {
+  margin-left: adaptive-margin(60,80);
+  flex:1;
   width: 50%;
   .planetBoxImg {
-    height: 500px;
-    width: 500px;
+    height: adaptive-margin(500, 680);
+    width: adaptive-margin(500, 680);
   }
 }
 .planetDescriptionSection {
@@ -72,30 +101,35 @@
 .planetNameSubtitle {
    
     font: 400 20px / 1 $fontF, Helvetica, Arial, serif;
+    font-size: adaptive-margin(20,24);
     color: rgb(52, 211, 215);
     letter-spacing: -0.6px;
 }
 .planetTitle {
       
   font: 400 40px / 1 $fontF, Helvetica, Arial, serif;
+  font-size: adaptive-margin(40,48);
   color: rgb(254, 254, 254);
   letter-spacing: -1.2px;
 }
 .planetHighlightText {
   margin: 5px 0 0;   
   font: 400 18px / 1.1 $fontR, Helvetica, Arial, serif;
+  font-size: adaptive-margin(18,22);
   color: rgb(254, 254, 254);
   letter-spacing: -0.54px;
+  max-width: adaptive-margin(538,600);
 }
 .planetBoxPresentSection {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: adaptive-margin(16,20);
   margin-top: 20px;
+  max-width: adaptive-margin(638,800);
 }
 .planetBoxRow {
   display: flex;
-  width: 80%;
+  width: adaptive-margin(538,600);
   justify-content: space-between;
    
 }
@@ -107,13 +141,49 @@
 }
 .planetBoxSubtitle {   
   font: 400 20px / 1 $fontF, Helvetica, Arial, serif;
+  font-size: adaptive-margin(20,24);
   color: rgb(52, 211, 215);
   letter-spacing: -0.6px;
 }
 .planetBoxText {
    
   font: 400 48px / 1 $fontF, Helvetica, Arial, serif;
+  font-size: adaptive-margin(48,58);
   color: rgb(254, 254, 254);
    
   letter-spacing: -1.44px;
 }
+@media (max-width:1440px) {
+  .planetNameSubtitle {
+    font-size: 20px;
+  }
+  .planetTitle {
+    font-size: 40px;
+  }
+  .planetHighlightText{
+    font-size: 18px;
+    max-width: 538px;
+  }
+  .planetBoxSubtitle {
+    font-size: 18px;
+  }
+  .planetBoxText{
+    font-size: 48px;
+  }
+  .planetBoxPresentSection{
+    max-width: 638px;
+  }
+  .planetBoxCol {
+    width: 33%;
+  }
+}
+@media (min-width:1200px) {
+  /* .section02Title {
+    font-size: 2.7vw;
+  } */
+}
+/* @media (min-width:1024px) and (max-width:1200px) {
+  .section02Title {
+    font-size: 2.78vw;
+  }
+} */

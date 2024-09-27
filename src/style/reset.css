@@ -10,9 +10,15 @@
 *::after {
 	box-sizing: border-box;
 }
-
+* {
+    -webkit-tap-highlight-color: transparent;
+	 
+}
 /* Links */
+*, html {
 
+    scroll-behavior: smooth !important;
+}
 a, a:link, a:visited  {
     text-decoration: none;
 }

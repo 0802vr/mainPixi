@@ -1,4 +1,6 @@
 @import 'variables';
+@import 'adapt';
+ 
 .main{
     position: relative;
     display: flex;
@@ -22,8 +24,9 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: calc(2230px * 1vw/14px);   
+  height: calc(2330px * 1vw/14.4px);   
   z-index: 1;
+   
 }
 .section01MainImage {
   position: absolute;
@@ -36,182 +39,477 @@
 .section01Nav {
   display: flex; 
   align-items: center;  
-  margin-top: 30px;
+  margin-top: adaptive-margin(30, 40);
 }
 .section01NavLogo {  
     font: 400 46px /1 $fontF;
+    font-size: adaptive-margin(46, 74);
     color: rgb(254, 254, 254);
     letter-spacing: -1.38px;     
-    min-width: 460px;
-    cursor: pointer;
+    min-width: adaptive-margin(460, 614);
+    cursor: url('../assets/cursor/2.png'), pointer;
      
 }
 .section01NavBox {
   display: flex;
   align-items: end;
-  width: 620px;
+  width: adaptive-margin(620, 880);
   justify-content: space-between;
-  cursor: pointer;
+  cursor: url('../assets/cursor/2.png'), pointer;
+  flex: auto;
   
 }
 .section01NavBoxLeft {
   display: flex;
   gap: 30px;
-  margin-bottom: 8px;
+  margin-bottom: adaptive-margin(8, 6);
+   
+   
 }
 .collectionsBox {
   display: flex;
   gap: 6px;
+  position: relative;
+  align-items: baseline;
 }
 .collectionsButton {
   
-  font: 500 18px / 1 $fontF;
+  font: 500 18px / 1 $fontR;
+  font-size: adaptive-margin(18, 22);
   color: rgb(254, 254, 254);
   letter-spacing: -0.54px;
 }
 .collectionsImage {
   width: 9px;
   height: 9px;
-  margin: 5px 0 4px;
+  margin-top: adaptive-margin(5, 9);
+  transition: all 0.2s linear;
 }
+.additionalBlock {
+ /*  width: 139px;
+  height: 124px;   */ 
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: #212121;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 27px;
+  width: 160px;
+ /*  padding-right: 47px; */
+  flex-direction: column;
+  transition: all 0.2s linear;
+  gap: 16px;
+  display: flex;
+  opacity: 0; /* серый цвет */
+  position: absolute; /* позиционируем его абсолютно */
+  z-index: 10; /* чтобы блок располагался поверх других элементов */
+  margin-top: 5px; 
+  top: 100%;
+  left: -9px;/* добавление небольшого отступа от родительского элемента */
+}
+.additionalBlockLink {
+  color: #707070;
+  font-family: $fontR;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 22px */
+  letter-spacing: -0.66px;
+  transition: 0.2s linear all;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: #fefefe;
+     
+    .additionalBlockIcon {
+      margin-right: 5px;
+      width: adaptive-margin(5,8);
+      height: adaptive-margin(5,8);
+      opacity: 1;
+    }
+  }
+}
+
+.additionalBlockIcon {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
 .whitePaperButton {
-  font: 500 18px / 1 $fontF;
+  font: 500 18px / 1 $fontR;
+  font-size: adaptive-margin(18, 22);
   color: rgb(254, 254, 254);
   letter-spacing: -0.54px;
 }
 .blogButton {
-  font: 500 18px / 1 $fontF;
+  font: 500 18px / 1 $fontR;
+  font-size: adaptive-margin(18, 22);
   color: rgb(254, 254, 254);
   letter-spacing: -0.54px;
-  cursor: pointer;
+  cursor: url('../assets/cursor/2.png'), pointer;
 }
 
 .section01NavBoxRight {
   display: flex;
   align-items: center;
   gap: 10px;
-   
+  position: relative;   
+  margin-top: adaptive-margin(0,-2);
+}
+.playerInfoSection {
+  margin-top: adaptive-margin(0, 2);
 }
 .playerName {
   margin: 0 14px 0 0;
-  width: 100px;
+  /* width: 100px; */
   height: 16px;
   font: 500 16px/1 $fontR;
+  font-size: adaptive-margin(16, 18);
   color: rgb(254, 254, 254);
 }
 .playerIdSection {
   display: flex;
+  align-items: center;
   gap: 0 6px;
+  margin-top: adaptive-margin(0,2);
 }
 .playerImage {
-  width: 40px;
-  height: 40px;
+  width: adaptive-margin(40 , 53);
+  height: adaptive-margin(40 , 53);;
   border-radius: 20px;
 }
 .playerIdImage {
-  margin: 3px 0 4px;
-  width: 10px;
-  height: 10px;
+  margin: 2px 0 4px;
+  width: adaptive-margin(10,14);
+  height: adaptive-margin(10,14);
 
 }
 .playerIdText {   
   font: 400 14px / 1.2 $fontR, Helvetica, Arial, serif;
+  font-size: adaptive-margin(14, 18);
   color: rgb(112, 112, 112);
 }
-.section01NavBtn {
+.additionalBlockPlayer{
+  position: absolute;  
+  z-index: 10; 
+  margin-top: 5px; 
+  top: 100%;
+  right: 0;
+  width: 573px;
+  height: 300px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: #212121;
+  transition: all 0.2s linear;
+  display: flex;
+  gap: 20px;
+  padding: 20px 30px;
+  opacity: 0;
+}
+.additionalBlockPlayerGif {
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+}
+.additionalBlockPlayerBox2 {
+  display: flex;
+  flex-direction: column;  
+  width: 160px;
+}
+.additionalBlockPlayerBox2Title {
+  color: #717171;
+  font-family: $fontR;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;  
+  margin-bottom: 10px;
+}
+.additionalBlockPlayerLink {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 36px;
+  font-family: $fontR;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%; 
+  display: flex;   
+  color: #fefefe;  
+  /* color: #707070;    */
+  transition: all 0.2s linear;
+  &:hover {
+    /* color: #34D3D7; */
+    background-color: #313131;
+    border-radius: 4px;
+
+    .additionalBlockPlayerIcon {
+       
+      width: 16px;
+      height: 16px;      
+      opacity: 1;
+      /* color: #34D3D7; */
+      /* color: #34D3D7;
+      stroke:#34D3D7; */
+      path {
+        /* fill:#34D3D7; */
+      }
+    }
+  }
+}
+.additionalBlockPlayerIcon { 
+   
+  width: 16px;
+  height: 16px;      
+  opacity: 1;
+  transition: all 0.2s linear;
+}
+.additionalBlockPlayerBox3 {
   display: flex;
   flex-direction: column;
-  margin-left: 40px;
-  width: 240px;
-  height: 40px;
-  border-radius: 4px;
-  outline: 1px solid rgb(254, 254, 254);
-  outline-offset: -1px;
-  cursor: pointer;
+   
+
 }
-.group {
-  position: relative;
+.additionalBlockPlayerBox3Items {
   display: flex;
   flex-direction: column;
-  margin: 0 4px 4px 0;
+   
 }
-.rect4 {
+.additionalBlockPlayerLinkLast {
+  margin-top: auto;
+  span {
+    margin-top: -1px;
+  }
+  &:hover {
+    color: #FF0000;;
+     
+    .additionalBlockPlayerIcon {
+       
+      width: 16px;
+      height: 16px;      
+      opacity: 1;
+      
+      path {
+        fill:#FF0000;
+      }
+    }
+  }
+}
+.additionalBlockPlayerBorderLine {
+  width: 1px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.20);
+}
+.section01NavBtn { 
+  margin-left: 40px;   
+  cursor: url('../assets/cursor/2.png'), pointer;
+  flex: 1;
+}
+.section01NavBtnBox{
   position: relative;
-  min-height: 36px;
-  background-color: rgb(254, 254, 254);
-  border-radius: 4px;
+  width: adaptive-margin(236, 295);
+  height: adaptive-margin(36, 45);
+  &:hover {
+    .playPeexiButton {
+      top: 0;
+      left: 0;
+      background-color: #34D3D7;
+      path {
+        fill: #34D3D7;
+      }
+    }
+    .playPeexiButtonText {
+      left: calc(50% - adaptive-margin(29, 35));
+      top: calc(50% - adaptive-margin(9, 9));
+    }
+  }
+}
+.section01BtnSvg {
+  width: adaptive-margin(236, 295);
+  height: adaptive-margin(36, 45);
+}
+ 
+.playPeexiButton {
+  position: absolute;
+  top: adaptive-margin(-6, -8);
+  left: adaptive-margin(-6, -8);
+  width: adaptive-margin(236, 295);
+  height: adaptive-margin(36, 45);
+ /*  background-image: url(../assets/headerBtn.svg); */
+  /* background-position: center; */
+  text-transform: capitalize; 
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.playPeexiButton {
-   
+  background-color: #fefefe;
   font: 500 16px/1.2 $fontR, Helvetica, Arial, serif;
+  font-size: adaptive-margin(16, 18);
   color: rgb(18, 18, 18);
   letter-spacing: -0.48px;
+  text-align: center;
+  /* background-size: 100%;
+  background-repeat: no-repeat; */
+  cursor: url('../assets/cursor/2.png'), pointer;
+  transition: all 0.2s linear;
+  mask: url('../assets/maskHeader.svg');
+  mask-repeat: no-repeat;
+  mask-size: 100%;
+  path {
+    transition: all 0.2s linear;
+    width: adaptive-margin(234, 295);
+    height: adaptive-margin(34, 45);
+  }
+   
+}
+.playPeexiButtonText {
+  font: 500 16px/1.2 $fontR, Helvetica, Arial, serif;
+  font-size: adaptive-margin(16, 18);
+  color: rgb(18, 18, 18);
+  letter-spacing: -0.48px;
+  text-align: center;
+  position: absolute;
+  left: calc(50% - adaptive-margin(35, 43));
+  top: calc(50% - adaptive-margin(15, 17));
+  transition: all 0.2s linear;
+}
+.section01MainBoxTitle {
+  display: flex;
+  gap: 60px;
+   
+  margin-top: adaptive-margin(76, 110);
+  margin-bottom: adaptive-margin(24, 37);
 }
 .section01MainTitle {
-   
+  cursor: url('../assets/cursor/1.png'), default;
   text-transform: uppercase;
-  font: 400 269px / 1 $fontF, Helvetica, Arial, serif;
+   
+  font-weight: 400;
+  font-family: $fontF;
+  font-size: adaptive-margin(280, 380);
+  line-height: adaptive-margin(141, 197);
   color: rgb(254, 254, 254);
-  margin-top: 33px;
+  margin-top: adaptive-margin(24, 29);
 }
 .section01MainSubtitle {   
-    width: 512px;     
+    width: adaptive-margin(512, 645);     
     font: 500 20px / 1.2 $fontR, Helvetica, Arial, serif;
+    font-size: adaptive-margin(20, 26);
     color: rgb(254, 254, 254);
-    margin-top: -50px;
+    
+    cursor: url('../assets/cursor/1.png'), default;
 }
-.section01MainBtnPlay {  
-  width: 410px;
-  height: 44px;
-  border-radius: 4px;
-  outline: 1px solid rgb(254, 254, 254);
-  outline-offset: -1px;
-  margin-top: 20px;
-  cursor: pointer;
-}
-.section01MainBtnPlayBox {  
-  margin: 0 4px 4px 0;
-}
-.section01MainBtnPlayBoxRect {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 40px;
-  background-color: rgb(254, 254, 254);
-  border-radius: 4px;
+ 
+ 
+.section01MainBtnPlay {
+  margin-top: 25px;
+  cursor: url('../assets/cursor/2.png'), pointer;
+  width: 100%;
+  position: relative;  
+  &:hover {
+    .section01MainBtnPlayBoxBtn {
+      top: 0;
+      left: 0;
+      background-color: #34D3D7;
+      path {
+        fill: #34D3D7;
+      }
+    }
+    .section01MainBtnPlayBoxBtnText { 
+      left: calc(50% - adaptive-margin(69,78));
+      top: calc(50% - adaptive-margin(10,9));
+    }
+  }
+  
 } 
-.section01MainBtnPlayBoxBtn {
-  font: 500 16px/1.2 $fontR, Helvetica, Arial, serif;
-  color: rgb(18, 18, 18);
-  letter-spacing: -0.48px;
+.section01MainBtnPlayBoxSvg {
+    width: adaptive-margin(410, 492);
+    height: adaptive-margin(44, 53);
+    background: #fefefe;
+    
+    mask: url('../assets/btnMaskBack2.svg');
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+  /* path {
+    width: adaptive-margin(410,492);
+    height: adaptive-margin(44,52); 
+  } */
 }
+.section01MainBtnPlayBoxBtn {  
+  z-index: 1;
+  width: adaptive-margin(410,492);
+  height: adaptive-margin(44,53); 
+  position: absolute;
+  top: adaptive-margin(-6,-8);
+  left: adaptive-margin(-6,-8);
+  /* background-image: url(../assets/btnMain2.svg);
+  background-position: center; */
+  text-transform: capitalize;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  cursor: url('../assets/cursor/2.png'), pointer;
+  transition: all 0.2s linear;
+
+  background-color: #fefefe;
+  font: 500 16px/1.2 $fontR, Helvetica, Arial, serif;
+  font-size: adaptive-margin(16, 18);
+  color: rgb(18, 18, 18);
+  letter-spacing: -0.48px;  
+  mask: url('../assets/btnMask2.svg');
+  mask-repeat: no-repeat;
+  mask-size: 100%;
+  path {
+    transition: all 0.2s linear;
+
+  }
+   
+}
+.section01MainBtnPlayBoxBtnText {
+  font: 500 16px/1.2 $fontR, Helvetica, Arial, serif;
+  font-size: adaptive-margin(16, 18);
+  color: rgb(18, 18, 18);
+  letter-spacing: -0.48px;   
+  text-align: center;
+  position: absolute;
+  left: calc(50% - adaptive-margin(75, 85));
+  top: calc(50% - adaptive-margin(14, 16));
+  transition: all 0.2s linear;
+}
+ 
+
+
 .aboutProjectCont {
-  margin-top: auto;
-  display: flex;
-  flex-direction: column; 
-  width: 630px;
-  margin-left: 460px;
-  margin-bottom: 197px;
+margin-top: auto;
+display: flex;
+flex-direction: column; 
+width: adaptive-margin(630, 823);
+margin-left: adaptive-margin(460, 614);
+margin-bottom: adaptive-margin(197, 335);
 }
 .aboutProjectHeading {   
   font: 400 36px/1.1 $fontF, Helvetica, Arial, serif;
+  font-size: adaptive-margin(36, 46);
   text-transform: uppercase;
   color: rgb(254, 254, 254);
   letter-spacing: -1.08px;
+  cursor: url('../assets/cursor/1.png'), default;
 }
 .joinExploreSection {
   position: relative;
   display: flex;
+  justify-content: space-between;
   gap: 20px;
-  margin: 2px 0 0;
-  margin-bottom: 20px;
-  cursor: pointer;
+  margin-top: adaptive-margin(2,9);
+  margin-bottom: adaptive-margin(9,16);
+  cursor: url('../assets/cursor/2.png'), pointer;
 }
 .joinExploreSubtitle {   
   font: 500 20px/1.2 $fontR, Helvetica, Arial, serif;
+  font-size: adaptive-margin(20, 26);
   color: rgb(112, 112, 112);
   padding-bottom: 2px;
 }
@@ -221,23 +519,28 @@
 }
  
 .rectWhoWeAreSection {
-  width: 630px;
-  height: 340px;
+  width: 100%;
+  height: adaptive-margin(340,444);
   background-color: rgb(56, 56, 56);
   border-radius: 10px;
 }
+.aboutProjectItems {
+  height: 188px;
+  cursor: url('../assets/cursor/1.png'), default;
+}
 .worldDescription {
-  margin: 16px 0 0;
-  width: 630px;
+  margin: 16px 0 12px;
+   
   height: 44px;
   font: 400 18px/1.2 $fontR, Helvetica, Arial, serif;
+  font-size: adaptive-margin(18, 20);
   color: rgb(254, 254, 254);
 }
 .aboutProjectBox {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 12px;
+  margin-top: 26px;
 }
 .aboutProjectBoxElement {
   display: flex;
@@ -252,16 +555,139 @@
 }
 .aboutProjectBoxElementText { 
   font: 400 18px/1.2 $fontR, Helvetica, Arial, serif;
+  font-size: adaptive-margin(18, 20);
   color: rgb(254, 254, 254);
    
 }
+.burger {
+  display: none;
+}
 @media (min-width:1441px) {
-  .sectionMainMargin {
+  /* .sectionMainMargin {
     max-width: 100%;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding-left: calc(40px + 1vw);
     padding-right: calc(40px + 1vw);
+  } */
+}
+@media (max-width:1440px) {
+  .section01NavLogo {
+    font: 400 46px / 1 Fifacks;
+  }
+  .collectionsButton, .whitePaperButton, .blogButton {
+    font-size: 20px;
+  }
+  .section01MainSubtitle {
+    font-size: 20px;
+    width: 512px;
+  }
+  .section01NavBtnBox{
+     
+    width: 236px;
+    height: 36px;
+    &:hover {
+       
+      .playPeexiButtonText {
+        left: calc(50% - 31px);
+        top: calc(50% - 9px);
+      }
+    }
+  }
+  .section01BtnSvg {
+    width: 236px;
+    height: 36px;
+  }
+   
+  .playPeexiButton {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: 100%;  
+    height: 36px; 
+    path {
+      transition: all 0.2s linear;
+      width: 236px;
+      height: 36px;
+    }
+     
+  }
+  .playPeexiButtonText {    
+    font-size:16px;     
+    left: calc(50% - 35px);
+    top: calc(50% - 15px);
+     
+  }
+  .playerName {
+    font-size: 16px;
+  }
+  .playerIdText {
+    font-size: 14px;
+  }
+  .aboutProjectHeading {
+    font-size: 36px;
+  }
+  .worldDescription, .aboutProjectBoxElementText {
+    font-size: 18px;
+  }
+  
+}
+@media (max-width:1340px) {
+  .aboutProjectCont {
+    width: adaptive-marginPl(630,630);
+     
+  }
+  .rectWhoWeAreSection {
+    height: 340px;
+  }
+  .joinExploreSubtitle {
+    font-size: 20px;
   }
 }
+@media (max-width:1250px) {
+  .section01NavBoxLeft, .section01NavBtn {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .section01NavBox {
+    width: auto;
+    justify-content: end; 
+    height: 56px;
+      padding-bottom: 3px;
+      padding-left: 6px;
+      margin-bottom: 18px;
+  }
+  .sectionMainMargin {
+    /* max-width: 1400px; */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+     
+  } 
+  .playerImage {
+    width: 44px;
+    height: 44px;
+    margin-top: -10px;
+  }
+  .playerIdSection {
+    margin-top: 1px;
+  }
+  .playerInfoSection {
+    margin-top: 7px;
+  }
+  .additionalBlockPlayer {
+    display: none;
+  }
+  .section01NavBoxRight  {
+    width: 200px;
+  }
+  .section01Nav {
+    margin-top: 30px;
+  }
+}
+ 

@@ -1,69 +1,140 @@
 @import 'variables';
+@import 'adapt';
 .section03 {
-    margin-top: 180px;
+    padding-top: 200px;
+    background-color: #fff;
+    
 }
 
 .section03_box {
     display: flex;
+    margin-bottom: 20px;
 }
 .section03_box_title {
-    width: 460px;     
+    width: adaptive-margin(460, 614);     
     font: 400 32px / 1.1 $fontF, Helvetica, Arial, serif;
+    font-size: adaptive-margin(32,42);
     color: rgb(112, 112, 112);
     text-align: justify;
     letter-spacing: -0.96px;
-    flex: 0 0 460px;
+     
+    cursor: url('../assets/cursor/1.png'), default;
 }
 .section03_box_text {
     width: 100%;
-    font: 400 40px / 90% $fontF, Helvetica, Arial, serif;     
+    font: 400 40px / 90% $fontF, Helvetica, Arial, serif;   
+    font-size: adaptive-margin(40,52);  
     text-transform: uppercase; 
-    color: rgb(254, 254, 254);
+    color: /* rgb(254, 254, 254); */#121212;
     flex: 1;
+    cursor: url('../assets/cursor/1.png'), default;
+    span {
+        background: #34D3D7;
+        padding-left: 4px;
+        color: #121212;
+    }
 }
 .section03_itemsPlayers {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: adaptive-margin(0,10);     
+    cursor: url('/assets/players/dragCursor.png') 50 50, auto;
+    
 }
 .playerBoxContainer {
     display: flex;
-    margin-top: 30px;
-    margin-left: 90px;
-     
+    padding-top: 3vw;
+    overflow-x: hidden;
+    position: relative;
+    height: adaptive-margin(600, 745);
+
+}
+@keyframes translateXBox {
+    0%{
+        transform: translateX(50px);   
+    }
+    100%{
+        transform: translateX(0);  
+    }
+}
+@keyframes translateXBox2 {
+    0%{
+        transform: translateX(-50px);   
+    }
+    100%{
+        transform: translateX(0);  
+    }
 }
 .playerBox {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    z-index: 1;
+    width: adaptive-margin(320, 430);     
     margin-left: -90px;
-
-    &Active {
+     
+    &:nth-child(1) {
+        margin-left: 0;
+        transform: translateX(50px); 
+        animation: translateXBox 0.6s ease forwards;
+        animation-delay: 0.05s;
+    }
+    &:nth-child(2) {
+        transform: translateX(50px); 
+        animation: translateXBox 0.6s ease forwards;
+        animation-delay: 0.20s;
+    }
+    &:nth-child(3) {
+        transform: translateX(0);
+        animation-delay: 0.10s;
+    }
+    
+    &:nth-child(2n){
         z-index: 2;
-        /* margin-left: 0; */
-        .playerBoxRow {
-            display: block;
-        }
+    }
+    &:nth-child(4){
+        margin-left: -40px;
+        transform: translateX(-50px); 
+        animation: translateXBox2 0.6s ease forwards;
+        animation-delay: 0.25s;
+
+    }
+    &:nth-child(5) {
+        transform: translateX(-50px); 
+        animation: translateXBox2 0.6s ease forwards;
+        animation-delay: 0.15s;
+    }
+    &Active {
+        /* animation: translateXBox 0.3s ease forwards; */
+               
+        margin-top: 40px;
+        z-index: 3;
+        margin-left: adaptive-margin(-20, -60);
         .playerItemsImageBack {
-             min-width: 440px;
-             min-height: 440px;
+            scale: 1.4;
+            /* transition: scale 0.2s linear;
+             */
         }
         .playerItemsImageMain {
-            min-width: 440px;
-            min-height: 440px;
-             
+           /*  transition: scale 0.2s linear; */
+         /*    scale: 1.4; */
+            scale: 1.4;
+            left: 14px;
+            transform: translateX(50px); 
+            animation: translateXBox 0.6s ease forwards;
+            
         }
         .playerBoxRow {
-            margin-top: 50px;
+            opacity: 1;
+            height: auto;
+            margin-top: adaptive-margin(100,120);
+            margin-left: 25px;
+            /* margin-bottom: 30px; */
+             
         }
     }
-    /* &:nth-child(n + 2) {
-        margin-left: -100px;
-    }
-   */
-    &:nth-child(2n) {
-        z-index: 1;
-    }
+    
+    
 }
 .playerBoxTriagleTop {
     width: 20px;
@@ -77,22 +148,29 @@
     position: relative;
 }
 .playerItemsImageBack {
-    min-width: 320px;
-    min-height: 320px;
+    width: 100%;
+    /* transition: scale 0.1s linear; */
+    /* min-width: 320px;
+    min-height: 320px; */
 }
 .playerItemsImageMain {
-    min-width: 320px;
-    min-height: 320px;
+    /* min-width: 320px;
+    min-height: 320px; */
+    /* transition: scale 0.1s linear; */
     position: absolute;
     bottom: 0;
-    left: 30px;
+    left: 0;
+    width: 100%;
+    
 }
 .playerBoxRow {
-    display: none;
+    opacity: 0;
+    height: 0;
     margin-top: 15px;
-    max-width: 428px;
+     
     margin-left: 40px;
-    width: 320px;
+    scale: 1.425;
+    /* width: 320px; */
    
 }
 .playerBoxCol {
@@ -101,18 +179,24 @@
     
 }
 .playerBoxTitle {    
-    font: 400 32px / 1.2 $fontF, Helvetica, Arial, serif;
+    font: 400 22px / 1.2 $fontF, Helvetica, Arial, serif;
+    font-size: adaptive-margin(22, 30);
     color: rgb(254, 254, 254);
     letter-spacing: -0.2px;
+     
 }
 .playerBoxText {
-    width: 80%;
-    font: 500 18px / 1.2 $fontR, Helvetica, Arial, serif;
+    width: 85%;
+    font: 500 12.5px / 1.2 $fontR, Helvetica, Arial, serif;
+    font-size: adaptive-margin(12.5, 15.5);
     color: rgb(112, 112, 112);
+    height: 45px;
+    
 }
 .playerBoxNum {
     
-    font: 400 32px / 1.2 $fontF, Helvetica, Arial, serif;
+    font: 400 22px / 1.2 $fontF, Helvetica, Arial, serif;
+    font-size: adaptive-margin(22, 30);
     color: rgb(254, 254, 254);
 }
 .playerBoxTriagleBottom {
@@ -120,4 +204,41 @@
     height: 20px;
     margin-right: auto;
     margin-left: auto;
+}
+ 
+  
+@media (min-width:1741px) {
+    .playerBox {
+         
+        &Active {
+             
+            .playerItemsImageMain {
+               /*  transition: scale 0.2s linear; */
+             /*    scale: 1.4; */
+                scale: 1.3;
+                left: 14px;
+                margin-bottom: -20px;
+                
+            }
+             
+        }
+    }
+}
+@media (max-width:1250px) {
+    .section03_box_title {
+        font-size: 28px;
+    }
+    .section03_box_text {
+        font-size: 32px;
+    }
+    .playerBoxActive{
+        margin-left: -30px;
+    }
+    .playerBox {
+        width: 100%;
+    }
+    .playerBoxContainer {
+        height: auto;
+        padding-bottom: 3vw;
+    }
 }
