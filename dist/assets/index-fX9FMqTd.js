@@ -20,14 +20,14 @@
         <h3 class="burgerBlockPlayerBox2Title">Game</h3>
             <div  class="burgerBlockPlayerBoxItems">
                 <a href="#" class="burgerBlockPlayerLink">
-                  <img class="burgerBlockPlayerIcon" src="../assets/icon/bP.svg" alt="icon">
+                  <img class="burgerBlockPlayerIcon" src="./assets/icon/bP.svg" alt="icon">
                   
                     Battle Pass</a>
                 <a href="#" class="burgerBlockPlayerLink">
-                  <img class="burgerBlockPlayerIcon" src="../assets/icon/2.svg" alt="icon">  
+                  <img class="burgerBlockPlayerIcon" src="./assets/icon/2.svg" alt="icon">  
                   Auction</a>
                 <a href="#" class="burgerBlockPlayerLink">
-                  <img class="burgerBlockPlayerIcon" src="../assets/icon/3.svg" alt="icon">
+                  <img class="burgerBlockPlayerIcon" src="./assets/icon/3.svg" alt="icon">
                     
                 Leader board</a>
             </div>
@@ -36,20 +36,20 @@
           <h3 class="burgerBlockPlayerBox2Title">Account</h3>
         <div  class="burgerBlockPlayerBoxItems">
           <a href="#" class="burgerBlockPlayerLink">
-            <img class="burgerBlockPlayerIcon" src="../assets/icon/4.svg" alt="icon">
+            <img class="burgerBlockPlayerIcon" src="./assets/icon/4.svg" alt="icon">
               <!-- <img class="burgerBlockPlayerIcon" src="./assets/nav/ProfileIcon.svg" alt="icon"> -->Profile</a>
           <a href="#" class="burgerBlockPlayerLink">
-            <img class="burgerBlockPlayerIcon" src="../assets/icon/5.svg" alt="icon">
+            <img class="burgerBlockPlayerIcon" src="./assets/icon/5.svg" alt="icon">
               
               
               
             <!-- <img class="burgerBlockPlayerIcon" src="./assets/nav/TradeIcon.svg" alt="icon"> -->Trade</a>
           <a href="#" class="burgerBlockPlayerLink">
-            <img class="burgerBlockPlayerIcon" src="../assets/icon/6.svg" alt="icon">
+            <img class="burgerBlockPlayerIcon" src="./assets/icon/6.svg" alt="icon">
               
             <!-- <img class="burgerBlockPlayerIcon" src="./assets/nav/Staking.svg" alt="icon"> -->Staking</a>
           <a href="#" class="burgerBlockPlayerLink">
-            <img class="burgerBlockPlayerIcon" src="../assets/icon/7.svg" alt="icon">
+            <img class="burgerBlockPlayerIcon" src="./assets/icon/7.svg" alt="icon">
               
             <!-- <img class="burgerBlockPlayerIcon" src="./assets/nav/Support.svg" alt="icon"> -->Support</a>
         </div>
@@ -57,7 +57,7 @@
         </div>
     <div class="burger_menu_btn_box">
         <button class="burger_menu_btn">
-            <img class="burger_menu_btn_svg"  src="../assets/icon/8.svg" alt="icon">
+            <img class="burger_menu_btn_svg"  src="./assets/icon/8.svg" alt="icon">
              Log out</button>
         <svg class="burger_menu_btn_img" width="295" height="45" viewBox="0 0 295 45" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M31.436 1.13154C32.0239 0.720464 32.724 0.5 33.4415 0.5H291C292.933 0.5 294.5 2.067 294.5 4L294.5 20.4159C294.5 21.5587 293.942 22.6296 293.005 23.2844L263.564 43.8685C262.976 44.2795 262.276 44.5 261.559 44.5H4C2.067 44.5 0.5 42.933 0.5 41V24.5841C0.5 23.4413 1.05792 22.3704 1.99451 21.7156L31.436 1.13154Z" stroke="#FEFEFE"/>
@@ -116,4 +116,4 @@
         </div> 
     </div>
     `}}
-//# sourceMappingURL=index-DK5Mpd9m.js.map
+//# sourceMappingURL=index-fX9FMqTd.js.map
