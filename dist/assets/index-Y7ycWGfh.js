@@ -116,7 +116,7 @@
                 </div>
                 
             </div>
-        `:(n===3||n===4)&&(console.log(n),u.innerHTML=`
+        `:(n===3||n===4)&&(u.innerHTML=`
             <div class="playerItems">
                 <div class="playerItemsImages">
                     <img class="playerItemsImageBack" src="${o.backgroundImage}" alt="Background image of ${o.title}" />
@@ -171,4 +171,4 @@
         </div> 
     </div>
     `}}
-//# sourceMappingURL=index-BM-RtwDd.js.map
+//# sourceMappingURL=index-Y7ycWGfh.js.map
