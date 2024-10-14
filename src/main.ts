@@ -4,6 +4,7 @@ import 'swiper/css';
 import gsap from 'gsap';
  
 import {playerBurgerText} from './ts/playerBurger'; 
+import { scrollTriggerTitle } from './ts/scrollTriggerTitle';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -436,7 +437,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const subtitles = document.querySelectorAll('.joinExploreSubtitle')!;
     const worldDescription = document.querySelector('.worldDescription')!;
     const projectBox = document.querySelector('.aboutProjectBox')!;
-
+    const rectWhoWeAreSectionBox = document.querySelector('.rectWhoWeAreSectionBox')! as HTMLElement;
+    const imgMainBanner = document.querySelector('.rectWhoWeAreSectionImg')! as HTMLElement;
     const projectContent = [
         {
             description: "Our world is one of neon lights in megacities, giant corporations, and endless opportunities for exploration and adventure. In Peexi Punk, you will:",
@@ -444,7 +446,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 "Explore detailed locations, from grim alleyways to high-tech laboratories.",
                 "Meet and interact with numerous unique NPCs, each with their own goals and stories.",
                 "Engage in dynamic events and missions that develop the main storyline."
-            ]
+            ],
+            src: './assets/01/01.png'
         },
         {
             description: "Peexi Punk is integrated into the Haqq Network, ensuring the security and reliability of all in-game transactions. Blockchain technologies empower the game to achieve:",
@@ -452,26 +455,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 "Affordable transactions, allowing players to easily exchange items and resources.",
                 "Convenient and secure crafting, creating unique items and equipment.",
                 "Efficient auction system functioning, where every player can trade and sell their discoveries."
-            ]
+            ],
+            src: './assets/01/02.png'
         },
         {
             description: "In Peexi Punk, there are no limits to your imagination and possibilities. Start your adventure today and become part of our growing community. Be ready for the unknown, and let your cyberpunk dreams become reality. Welcome to the future. Welcome to Peexi Punk.",
             elements: [
                  
-            ]
+            ],
+            src: './assets/01/03.png'
         }
     ];
 
     subtitles.forEach((subtitle) => {
         subtitle.addEventListener('click', () => {
             // Remove active class from all subtitles
-            subtitles.forEach((sub) => sub.classList.remove('joinExploreSubtitleActive'));
+            subtitles.forEach((sub, _) => sub.classList.remove('joinExploreSubtitleActive'));
             // Add active class to the clicked subtitle
             subtitle.classList.add('joinExploreSubtitleActive');
 
             // Get the index of the clicked subtitle
             const index = subtitle.getAttribute('data-index') as unknown as number;
-
+             
+            /* imgMainBanner.src = projectContent[index].src; */
+            rectWhoWeAreSectionBox.style.transform = `translateX(-${imgMainBanner.clientWidth * index}px)`; // Make sure to append 'px'
             // Update the world description and project box content
             worldDescription.textContent = projectContent[index].description;
             projectBox.innerHTML = projectContent[index].elements.map(element => `
@@ -490,41 +497,41 @@ const playerData = [
         id: '04',
         title: 'Healer',
         description: 'Restores health using nanobots.',
-        backgroundImage: './assets/players/04B.png',
+        backgroundImage: './assets/class/04b.svg',
         mainImage: './assets/players/04.png'
     },
     {
         id: '05',
         title: 'Ranger',
         description: 'Utilizes cutting-edge high-tech rifles.',
-        backgroundImage: './assets/players/05B.png',
+        backgroundImage: './assets/class/05b.svg',
         mainImage: './assets/players/05.png'
     },
     {
         id: '01',
         title: 'Battle Mage',
         description: 'Uses ancient crystals for pyromancy and other forms of magic.',
-        backgroundImage: './assets/players/01B.png',
+        backgroundImage: './assets/class/b01.svg',
         mainImage: './assets/players/01.png'
     },
     {
         id: '02',
         title: 'Warrior',
         description: 'Assault class: tank and damage dealer with paired light swords.',
-        backgroundImage: './assets/players/02B.png',
+        backgroundImage: './assets/class/02b.svg',
         mainImage: './assets/players/02.png'
     },
     {
         id: '03',
         title: 'Summoner',
         description: 'Uses summoning items to call forth different creatures that deal damage to enemy NPCs.',
-        backgroundImage: './assets/players/03B.png',
+        backgroundImage: './assets/class/03b.svg',
         mainImage: './assets/players/03.png'
     },
 ];
 
 let activeIndex = 2; // Начальный активный индекс
-const playerCont = document.querySelector('.playerBoxContainer')!;
+const playerCont = document.querySelector('.playerBoxContainer')! as HTMLElement;
 
 // Отрисовка слайдера
 const renderSlider = () => {
@@ -541,13 +548,15 @@ const renderSlider = () => {
 
         const playerBox = document.createElement('div');
         playerBox.className = `playerBox `
-        
-        
-        playerBox.innerHTML = `
+         
+        if(i === 0 || i === 1) {
+            
+            playerBox.innerHTML = `
             <div class="playerItems">
                 <div class="playerItemsImages">
                     <img class="playerItemsImageBack" src="${player.backgroundImage}" alt="Background image of ${player.title}" />
                     <img class="playerItemsImageMain" src="${player.mainImage}" alt="Main image of ${player.title}" />
+                     
                 </div>
                 <div class="playerBoxRow">
                     <div class="playerBoxCol">
@@ -557,9 +566,60 @@ const renderSlider = () => {
                     <p class="playerBoxText">
                         ${player.description}
                     </p>
+                    
                 </div>
+                
             </div>
         `;
+        }
+        else if(i === 2) {
+            playerBox.innerHTML = `
+            <div class="playerItems">
+                <div class="playerItemsImages">
+                    <img class="playerItemsImageBack" src="${player.backgroundImage}" alt="Background image of ${player.title}" />
+                    <img class="playerItemsImageMain" src="${player.mainImage}" alt="Main image of ${player.title}" />
+                     
+                </div>
+                <div class="playerBoxRow">
+                    <div class="playerBoxCol">
+                        <h6 class="playerBoxTitle">${player.title}</h6>
+                        <h3 class="playerBoxNum">${player.id}</h3>
+                    </div>
+                    <p class="playerBoxText">
+                        ${player.description}
+                    </p>
+                    
+                </div>
+                
+            </div>
+        `;
+
+        }
+        else if (i === 3 || i === 4){
+            
+            playerBox.innerHTML = `
+            <div class="playerItems">
+                <div class="playerItemsImages">
+                    <img class="playerItemsImageBack" src="${player.backgroundImage}" alt="Background image of ${player.title}" />
+                    <img class="playerItemsImageMain" src="${player.mainImage}" alt="Main image of ${player.title}" />
+                     
+
+                </div>
+                <div class="playerBoxRow">
+                    <div class="playerBoxCol">
+                        <h6 class="playerBoxTitle">${player.title}</h6>
+                        <h3 class="playerBoxNum">${player.id}</h3>
+                    </div>
+                    <p class="playerBoxText">
+                        ${player.description}
+                    </p>
+                    
+                </div>
+                
+            </div>
+        `;
+        }
+        
         /*   */
         if(isActive){
             playerBox.classList.add('playerBoxActive')
@@ -568,7 +628,19 @@ const renderSlider = () => {
         // При клике изменяем активный элемент
         playerBox.addEventListener('click', () => updateSlider(index));
         playerCont.appendChild(playerBox);
+        
     }
+        
+     
+     
+    let activeBox = document.querySelector('.playerBoxActive .playerItemsImageBack')! as HTMLElement;
+    let playerBox = document.querySelector('.playerBoxContainer')! as HTMLElement;
+    let textBox = document.querySelector('.playerBoxActive .playerBoxRow ') ! as HTMLElement;
+    /* playerBox.style.height = '300px' */
+    console.log(playerBox.clientHeight, textBox.clientHeight,  activeBox.clientHeight)
+    // Добавляем imgElement в playerCont
+ 
+
 };
 
 // Функция обновления слайдера
@@ -578,6 +650,7 @@ const updateSlider = (index:number) => {
         // Обновляем активный индекс
         activeIndex = index;
         renderSlider();
+       
     }
      // Перерисовываем слайдер
 };
@@ -633,12 +706,16 @@ document.addEventListener("DOMContentLoaded", function() {
     collectionsButton.addEventListener('mouseenter', function() {
       additionalBlock.style.opacity = '1'; // Показываем блок при наведении
       collectionsImage.style.rotate = '60deg';
+      additionalBlock.addEventListener('mouseleave', function(e) {
+
+        additionalBlock.style.opacity = '0'; 
+        collectionsImage.style.rotate = '0deg';// Скрываем блок при выводе курсора
+        console.log(e.target, 11)
+      });
+      console.log(22)
     });
   
-    additionalBlock.addEventListener('mouseleave', function() {
-      additionalBlock.style.opacity = '0'; 
-      collectionsImage.style.rotate = '0deg';// Скрываем блок при выводе курсора
-    });
+    
   
     collectionsButton.addEventListener('click', function() {
       // Переключаем видимость блока при клике
@@ -660,6 +737,27 @@ document.addEventListener("DOMContentLoaded", function() {
     playerBox.addEventListener('mouseleave', function() {
         playerBox.style.opacity = '0'; // Скрываем блок при выводе курсора
     });
+    function checkMouseDistance(e:any) {
+        const rect = playerBox.getBoundingClientRect();
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+    
+        // Проверяем, находится ли мышь более чем в 100 пикселях от playerBox
+        const isFarFromBox = (
+            mouseX < rect.left - 50 || 
+            mouseX > rect.right + 50 || 
+            mouseY < rect.top - 50 || 
+            mouseY > rect.bottom + 50
+        );
+    
+        // Если мышь далеко от playerBox, устанавливаем opacity = 0
+        if (isFarFromBox) {
+            playerBox.style.opacity = '0';
+        }  
+    }
+    
+    // Добавляем обработчик события mousemove для проверки положения мыши
+    document.addEventListener('mousemove', checkMouseDistance);
   
     playerButton.addEventListener('click', function() {
       // Переключаем видимость блока при клике
@@ -672,28 +770,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   });
- /*  function applyDefaultCursor() {
-    const elements = document.querySelectorAll('*'); // выбираем все элементы на странице
-    elements.forEach(element => {
-        if (window.getComputedStyle(element).cursor === 'default') {
-            element.classList.add('default-cursor');
-        }
-    });
-}
 
-// Функция для применения курсора для элементов с классом pointer
-function applyPointerCursor() {
-    const elements = document.querySelectorAll('*'); // выбираем все элементы на странице
-    elements.forEach(element => {
-        if (window.getComputedStyle(element).cursor === 'pointer') {
-            element.classList.add('pointer-cursor');
-        }
-    });
-}
-
-// Применяем курсоры
-applyDefaultCursor();
-applyPointerCursor(); */
 if (window.innerWidth < 1250) {
 
 
@@ -845,11 +922,9 @@ const burgerList = {
             <h3 class="burger_title">Blog</h3>
         </div>
         <div class="burger_menu_btn_box">
-            <button class="burger_menu_btn">Play peexi</button>
-            <svg class="burger_menu_btn_img" width="295" height="45" viewBox="0 0 295 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M31.436 1.13154C32.0239 0.720464 32.724 0.5 33.4415 0.5H291C292.933 0.5 294.5 2.067 294.5 4L294.5 20.4159C294.5 21.5587 293.942 22.6296 293.005 23.2844L263.564 43.8685C262.976 44.2795 262.276 44.5 261.559 44.5H4C2.067 44.5 0.5 42.933 0.5 41V24.5841C0.5 23.4413 1.05792 22.3704 1.99451 21.7156L31.436 1.13154Z" stroke="#FEFEFE"/>
-            </svg>
-                
+            <button class="burger_menu_btn">Play Demo</button>
+            <img  class="burger_menu_btn_img" src="./assets/burger/svgB.svg" alt="icon"/>
+                <button class="burger_menu_btn_img_mob"></button>
              
         </div> 
     </div>
@@ -857,3 +932,16 @@ const burgerList = {
 
 
 }
+/* const body = document.body;
+body.addEventListener('mouseenter', () => {
+    body.classList.add('custom-scroll');
+});
+
+body.addEventListener('mouseleave', () => {
+    body.classList.remove('custom-scroll');
+}); */
+ 
+scrollTriggerTitle()
+
+
+

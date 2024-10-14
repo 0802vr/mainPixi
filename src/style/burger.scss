@@ -1,3 +1,5 @@
+@import 'variables';
+@import 'adapt';
 @keyframes btnBurgerAnim {
     0% {
         left: -4px;
@@ -62,7 +64,7 @@
     }
 }
 .burgerLine {
-    height: 2.9px;
+    height:auto;
     width: 30px;
     transition: all 0.2s linear;
 }
@@ -82,53 +84,17 @@
         margin-top: -7px;
     }
 }
-/* .burger_menu {
-    z-index: 2;
-    background:rgba($color: #000000, $alpha: 0.4);
-    height: 0;
-    width: 0;
-     
-    &.burger_menu_Active {
-        position: fixed;
-        height: 200vh;
-        width: 100vw;
-        .burger_menu_container {
-             
-            background: rgba($color: #000000, $alpha: 1);
-            height: 100%;
-            width: 331px;
-            margin-left: auto;
-            transition: width 0.2s linear;
-            .burger_line {
-                width: 100%;
-                height: 1px;
-                background-color: #34D3D7;
-            }
-        }
-        
-    }
-    
-}
-.burger_menu_container {
-    width: 0;
-    transition: width 0.2s linear;
-}
-.overflow-hidden {
-    overflow: hidden;
-}
- 
-.section01NavBox_Active {
-    z-index: 3;
-}
- */
+
+
  .section01NavBox_Active {
     z-index: 3;
-    width: 200px;
+    /* width: 200px; */
     flex: none;
     margin-left: auto;
 }
 .section01NavBox_Active_2 {
     background: #262626;
+    
     /* height: 56px;
     padding-bottom: 3px;
     padding-left: 6px;
@@ -181,30 +147,20 @@
     .burger_menu_btn_box {
         display: block;
     }
-   /*  .burgerBlockPlayerBox2, .burgerBlockPlayerBox3{
-        padding-left: 32px;
-        width: 220px;
-        display: flex;
-        flex-direction: column;
-        h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        a {
-            font-size: 22px;
-        }
-    } */
     
     .burgerBlockPlayerBox2 {
         padding-left: 22px;
-        width: 220px;
+        padding-right: 22px;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        margin: 30px 0;
+        margin: 26px 0;
     }
     .burgerBlockPlayerBox3 {
         margin: 0;
-        width: 170px;
+        padding-left: 22px;
+        padding-right: 22px;
+        width: 100%;
     }
     .burgerBlockPlayerBox2Title {
         color: #717171;
@@ -214,7 +170,7 @@
         font-weight: 500;
         line-height: 100%; 
         margin-bottom: 10px;
-        padding-left: 10px;
+        padding-left: 6px;
     }
     
      
@@ -224,7 +180,7 @@
         
     }
     .burgerBlockPlayerLink {
-        padding-left: 10px;
+        padding-left: 6px;
         text-decoration: none;
         color: #FFF;
         font-family: Rubik;
@@ -262,13 +218,13 @@
     height: 1px;
     background-color: none;
     border-bottom: #404040 1px solid;
-    padding-top: 105px;
+    padding-top: 96px;
 }
 .burger_box {
     display: none;
     flex-direction: column;
     gap: 16px;
-    padding-top: 30px;
+    padding-top: 14px;
 }
 .burger_box_2 {
     padding-top: 12px;
@@ -303,7 +259,7 @@
     }
     .burger_title_svg {
          
-        rotate: 0deg;
+        rotate: 60deg;
         margin-bottom: 0;
         path {
             fill: #121212;
@@ -349,8 +305,8 @@
     letter-spacing: -0.03em;
     color: #121212;
     position: absolute;
-    top: -4px;
-    left: 16px;
+    top: -6px;
+    left: 14px;
     transition: all 0.2s linear;
     mask-size: 100%;
     mask-repeat: no-repeat;
@@ -358,9 +314,15 @@
     align-items: center;
     justify-content: center;
     mask: url(../assets/burger/maskB.svg);
-
+      /* <svg width="295" height="45" viewBox="0 0 295 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M31.1495 0.721765C31.8214 0.251959 32.6215 0 33.4415 0H291C293.209 0 295 1.79086 295 4L295 20.4159C295 21.722 294.362 22.9458 293.292 23.6942L263.851 44.2782C263.179 44.748 262.378 45 261.559 45H4C1.79086 45 0 43.2091 0 41V24.5841C0 23.278 0.637624 22.0542 1.70802 21.3058L31.1495 0.721765Z" fill="#FEFEFE"/>
+    </svg> */
+     
     .burger_menu_btn_svg {
         margin-right: 5px;
+        width: 32px;
+        height: 32px;
+        scale: 0.5;
     }
 
 }
@@ -371,10 +333,149 @@
 }
 .burger_title_svg {
     margin-left: 146px;
-    rotate: 60deg;
+    rotate: 0deg;
     margin-bottom: -2px;
     transition: all 0.2s linear;
     path {
         fill: #fefefe;
     }
 }
+.burger_menu_btn_img_mob {
+    display: none;
+}
+@media (max-width:680px) {
+    .section01NavBox_Active_2 {
+        background: none;
+    }
+    .burger_menu_active .burger_menu_container {
+        width: 100%;
+    }
+    .burger_title {
+        display: flex;
+        align-items: baseline;
+    }
+    .burger_title_svg {
+        margin-left: 10px;
+    }
+    .burger_box_2_Active {
+        .burger_title {
+            display: flex;
+            justify-content: space-between;
+            width: calc(100% - 10px);
+        } 
+        .burger_title_svg {
+            margin-left: auto;
+        }
+    }
+    .section01NavLogo {
+        z-index: 3;
+    }
+    .border-path {
+        height: 50px; /* Задает постоянную высоту */
+    }
+    .burger_menu_btn {
+        width: calc(100% - 35px);
+        height: 50px;
+        clip-path: polygon(0% 100%, 90% 100%, 100% 70%, 100% 0, 10% 0%, 0% 30%);
+        mask: none;
+        z-index: 2;
+        /* mask: url(../assets/burger/650/01.svg); 
+        mask-size: 100%;
+        mask-repeat: no-repeat;  */
+    }
+    .burger_menu_btn_img {
+        width: calc(100% - 35px);
+        height: 48px;
+        content: '';
+        display: none;
+ }
+ .burger_menu_btn_img_mob {
+    position: relative;
+    display: block;
+    width: calc(100% - 15px);
+    height: 50px;
+    background-color: transparent; 
+    z-index: 1; 
+}
+
+.burger_menu_btn_img_mob::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: polygon(0.5% 98%, 90% 98%, 99.8% 68%, 99.8% 2%, 9% 2%, 1% 29%);
+    background-color: #121212; /* Фон прозрачный */
+    border: 2px solid transparent; /* Граница прозрачная, чтобы не была видна */
+    z-index: 0; /* Принимает значение под элементом */
+}
+
+.burger_menu_btn_img_mob::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: polygon(0% 100%, 90% 100%, 100% 70%, 100% 0, 10% 0%, 0% 30%);
+    background-color: #fefefe; /* Граница здесь */
+    z-index: -1; /* На самом дне */
+}
+ 
+
+
+    .burger_menu_active .burger_menu_container .burgerBlockPlayerBox2 {
+        padding-left: 16px;
+        padding-right: 50%;
+         
+    }
+}
+@media (max-width:580px)  {
+    .burger_menu_btn {
+        /* width: calc(100% - 30px);
+        height: 50px;
+        mask: url(../assets/burger/550/01.svg); 
+        mask-size: 100%;
+        mask-repeat: no-repeat; */ 
+    }
+    .burger_menu_btn_img {
+        /* width: calc(100% - 8px);
+        height: 50px;
+        content: url(../assets/burger/550/02.svg); */
+    }
+}
+@media (max-width:460px) {
+    .burger {
+        margin-left: 20px;
+    }
+    .burger_menu_btn {
+        /* width: calc(100% - 30px);
+        height: 50px;
+        mask: url(../assets/burger/450/01.svg); 
+        mask-size: 100%;
+        mask-repeat: no-repeat;  */
+    }
+    .burger_menu_btn_img {
+       /*  width: calc(100% - 10px);
+        height: auto;
+        content: url(../assets/burger/450/02.svg); */
+    }
+   /*  .section01NavBox_Active {
+        width: 200px;
+        
+        .playerInfoSection {
+             
+            display: block;
+            width: 200px;
+        }
+    } */
+     
+}
+/*@media (min-width:360px) and (max-width:480px) {
+   
+    .section01NavBox_Active {
+        
+        margin-left: adaptive-marginM2(-160, -40);
+    }
+} */

@@ -26,6 +26,8 @@
   width: 100%;
   height: calc(2330px * 1vw/14.4px);   
   z-index: 1;
+  background: url(../assets/mainBanner1.gif);
+  background-size: cover;
    
 }
 .section01MainImage {
@@ -70,7 +72,7 @@
   display: flex;
   gap: 6px;
   position: relative;
-  align-items: baseline;
+  align-items: center;
 }
 .collectionsButton {
   
@@ -82,7 +84,8 @@
 .collectionsImage {
   width: 9px;
   height: 9px;
-  margin-top: adaptive-margin(5, 9);
+  margin-top: adaptive-margin(0,2);
+  /* margin-top: adaptive-margin(5, 9); */
   transition: all 0.2s linear;
 }
 .additionalBlock {
@@ -94,7 +97,7 @@
   padding-top: 13px;
   padding-bottom: 13px;
   padding-left: 27px;
-  width: 160px;
+  width: 140px;
  /*  padding-right: 47px; */
   flex-direction: column;
   transition: all 0.2s linear;
@@ -172,17 +175,18 @@
 }
 .playerIdSection {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 0 6px;
   margin-top: adaptive-margin(0,2);
 }
 .playerImage {
   width: adaptive-margin(40 , 53);
-  height: adaptive-margin(40 , 53);;
+  height: adaptive-margin(40 , 53);
+ /*  margin-top: -10px; */
   border-radius: 20px;
 }
 .playerIdImage {
-  margin: 2px 0 4px;
+  margin: 2px 0 adaptive-margin(3, 6);
   width: adaptive-margin(10,14);
   height: adaptive-margin(10,14);
 
@@ -205,8 +209,9 @@
   background: #212121;
   transition: all 0.2s linear;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   padding: 20px 30px;
+  padding-right: 10px;
   opacity: 0;
 }
 .additionalBlockPlayerGif {
@@ -226,6 +231,7 @@
   font-weight: 500;
   line-height: 100%;  
   margin-bottom: 10px;
+  padding-left: 10px;
 }
 .additionalBlockPlayerLink {
   padding: 0 10px;
@@ -249,9 +255,8 @@
 
     .additionalBlockPlayerIcon {
        
-      width: 16px;
-      height: 16px;      
-      opacity: 1;
+           
+       
       /* color: #34D3D7; */
       /* color: #34D3D7;
       stroke:#34D3D7; */
@@ -262,15 +267,20 @@
   }
 }
 .additionalBlockPlayerIcon { 
-   
   width: 16px;
-  height: 16px;      
-  opacity: 1;
+  height: 16px;
+  margin-bottom: 3px;
+  
   transition: all 0.2s linear;
+  path {
+    fill:#fefefe;
+  }
+  
 }
 .additionalBlockPlayerBox3 {
   display: flex;
   flex-direction: column;
+  flex: 1;
    
 
 }
@@ -281,20 +291,27 @@
 }
 .additionalBlockPlayerLinkLast {
   margin-top: auto;
+  gap: 0;
   span {
-    margin-top: -1px;
+    margin-top: 2px;
+  }
+  .additionalBlockPlayerIcon { 
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    scale: 0.5;
   }
   &:hover {
-    color: #FF0000;;
+    color: #FD4C33;;
      
     .additionalBlockPlayerIcon {
        
-      width: 16px;
-      height: 16px;      
-      opacity: 1;
+       rect{
+        fill:#FD4C33;
+       }
       
       path {
-        fill:#FF0000;
+        fill:#FD4C33;
       }
     }
   }
@@ -305,7 +322,7 @@
   background: rgba(255, 255, 255, 0.20);
 }
 .section01NavBtn { 
-  margin-left: 40px;   
+  margin-left: adaptive-margin(40,56);   
   cursor: url('../assets/cursor/2.png'), pointer;
   flex: 1;
 }
@@ -413,16 +430,16 @@
   &:hover {
     .section01MainBtnPlayBoxBtn {
       top: 0;
-      left: 0;
+      left: adaptive-margin(6,8);
       background-color: #34D3D7;
       path {
         fill: #34D3D7;
       }
     }
-    .section01MainBtnPlayBoxBtnText { 
+    /* .section01MainBtnPlayBoxBtnText { 
       left: calc(50% - adaptive-margin(69,78));
       top: calc(50% - adaptive-margin(10,9));
-    }
+    } */
   }
   
 } 
@@ -430,7 +447,7 @@
     width: adaptive-margin(410, 492);
     height: adaptive-margin(44, 53);
     background: #fefefe;
-    
+    margin-left: adaptive-margin(6,8);
     mask: url('../assets/btnMaskBack2.svg');
     mask-repeat: no-repeat;
     mask-size: 100%;
@@ -445,7 +462,7 @@
   height: adaptive-margin(44,53); 
   position: absolute;
   top: adaptive-margin(-6,-8);
-  left: adaptive-margin(-6,-8);
+  left:0 ;
   /* background-image: url(../assets/btnMain2.svg);
   background-position: center; */
   text-transform: capitalize;
@@ -453,9 +470,9 @@
   background-repeat: no-repeat;
   cursor: url('../assets/cursor/2.png'), pointer;
   transition: all 0.2s linear;
-
   background-color: #fefefe;
   font: 500 16px/1.2 $fontR, Helvetica, Arial, serif;
+  line-height: 0.7;
   font-size: adaptive-margin(16, 18);
   color: rgb(18, 18, 18);
   letter-spacing: -0.48px;  
@@ -468,7 +485,7 @@
   }
    
 }
-.section01MainBtnPlayBoxBtnText {
+/* .section01MainBtnPlayBoxBtnText {
   font: 500 16px/1.2 $fontR, Helvetica, Arial, serif;
   font-size: adaptive-margin(16, 18);
   color: rgb(18, 18, 18);
@@ -478,7 +495,7 @@
   left: calc(50% - adaptive-margin(75, 85));
   top: calc(50% - adaptive-margin(14, 16));
   transition: all 0.2s linear;
-}
+} */
  
 
 
@@ -523,15 +540,30 @@ margin-bottom: adaptive-margin(197, 335);
   height: adaptive-margin(340,444);
   background-color: rgb(56, 56, 56);
   border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #404040;
+  display: flex;
+}
+.rectWhoWeAreSectionBox {
+  width: 100%;
+  display: flex;
+  transition: all 0.4s ease-in-out;
+}
+.rectWhoWeAreSectionImg {
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+  
 }
 .aboutProjectItems {
   height: 188px;
   cursor: url('../assets/cursor/1.png'), default;
 }
 .worldDescription {
-  margin: 16px 0 12px;
+  margin: 16px 0 0;
+  /* margin: 16px 0 12px; */
    
-  height: 44px;
+  /* height: 44px; */
   font: 400 18px/1.2 $fontR, Helvetica, Arial, serif;
   font-size: adaptive-margin(18, 20);
   color: rgb(254, 254, 254);
@@ -540,7 +572,7 @@ margin-bottom: adaptive-margin(197, 335);
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 26px;
+  margin-top: 12px;
 }
 .aboutProjectBoxElement {
   display: flex;
@@ -562,6 +594,9 @@ margin-bottom: adaptive-margin(197, 335);
 .burger {
   display: none;
 }
+.section01NavBoxRight_mob {
+  display: none;
+}
 @media (min-width:1441px) {
   /* .sectionMainMargin {
     max-width: 100%;
@@ -573,15 +608,57 @@ margin-bottom: adaptive-margin(197, 335);
   } */
 }
 @media (max-width:1440px) {
+  .section01MainBtnPlayBoxSvg {
+    width: 409px;
+    height: 44px;
+    margin-left: 6px;
+}
+.section01MainBtnPlayBoxBtn {  
+   
+  width: 410px;
+  height: 44px; 
+  font-size: 16px;
+  top: -6px;
+  left: 0px;
+  
+   
+}
+.section01MainBtnPlay {
+   
+  &:hover {
+    .section01MainBtnPlayBoxBtn {
+      top: 0;
+      left: 6px;
+      background-color: #34D3D7;
+      path {
+        fill: #34D3D7;
+      }
+    }
+    
+  }
+}
+.section01NavBtn {
+  margin-left: 40px;
+}
   .section01NavLogo {
     font: 400 46px / 1 Fifacks;
   }
   .collectionsButton, .whitePaperButton, .blogButton {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 0.7;
+  }
+  .section01MainBoxTitle {
+    margin-bottom: 16px;
   }
   .section01MainSubtitle {
     font-size: 20px;
     width: 512px;
+  }
+  .playerIdImage {
+    margin:0;
+    margin-bottom: 2px;
+    width: 12px;
+    height: 12px;
   }
   .section01NavBtnBox{
      
@@ -599,7 +676,9 @@ margin-bottom: adaptive-margin(197, 335);
     width: 236px;
     height: 36px;
   }
-   
+   .collectionsImage {
+    margin-top: 0;
+   }
   .playPeexiButton {
     position: absolute;
     top: -6px;
@@ -620,10 +699,11 @@ margin-bottom: adaptive-margin(197, 335);
      
   }
   .playerName {
-    font-size: 16px;
+    font-size: 18px;
+    height: auto;
   }
   .playerIdText {
-    font-size: 14px;
+    font-size: 16px;
   }
   .aboutProjectHeading {
     font-size: 36px;
@@ -635,7 +715,12 @@ margin-bottom: adaptive-margin(197, 335);
 }
 @media (max-width:1340px) {
   .aboutProjectCont {
-    width: adaptive-marginPl(630,630);
+    width: 630px;
+     
+  }
+  .playerIdImage {
+    
+    margin-bottom: 1px;
      
   }
   .rectWhoWeAreSection {
@@ -646,19 +731,36 @@ margin-bottom: adaptive-margin(197, 335);
   }
 }
 @media (max-width:1250px) {
+  .section01 {
+        background-position-y: top;
+        background-position-x: 60%;
+  }
   .section01NavBoxLeft, .section01NavBtn {
     display: none;
+  }
+  .section01NavLogo {
+    font: 400 46px / 22px $fontF;
+    margin-top: 6px;
+    align-self: center;
+}
+  .playerIdImage {
+    
+    margin-bottom: 0px;
+     
   }
   .burger {
     display: block;
   }
   .section01NavBox {
-    width: auto;
+    width: 200px;
     justify-content: end; 
     height: 56px;
-      padding-bottom: 3px;
-      padding-left: 6px;
-      margin-bottom: 18px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    padding-left: 6px;
+    /* margin-top: -10px; */
+    flex: none;
+    margin-left: auto;
   }
   .sectionMainMargin {
     /* max-width: 1400px; */
@@ -672,10 +774,16 @@ margin-bottom: adaptive-margin(197, 335);
   .playerImage {
     width: 44px;
     height: 44px;
-    margin-top: -10px;
+    /* margin-top: -10px; */
   }
   .playerIdSection {
     margin-top: 1px;
+    margin-bottom: 2px;
+  }
+  .playerIdImage {
+    width: 12px;
+    height: 12px;
+    margin-top: 0;
   }
   .playerInfoSection {
     margin-top: 7px;
@@ -684,10 +792,282 @@ margin-bottom: adaptive-margin(197, 335);
     display: none;
   }
   .section01NavBoxRight  {
-    width: 200px;
+    width: 195px;
+    align-items: self-end;
   }
   .section01Nav {
-    margin-top: 30px;
+    margin-top: 20px;
+  }
+  .section01MainTitle {
+    font-size: calc(18.8vw + (23) * ((100vw - 360px) / (1250 - 360)));
+    margin-top: calc(7px + 29*(100vw - 360px) /(1920 - 360));
+    line-height: calc(32px + 171 * (100vw - 360px) / (1920 - 360));
+  }
+  .aboutProjectCont {
+    margin-left: calc(256px + 150 * ((100vw - 800px) / (1250 - 800)));
+  }
+  .section01Nav {
+    align-items: baseline;
   }
 }
+@media (max-width:1000px) {
+  .section01 {   
+     
+    height: 1750px;   
+    z-index: 1;
+     
+  }
+  .section01::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../assets/main/01mainFilter.png); /* Укажите путь ко второму изображению */
+    background-size: cover; /* Или используйте 'contain', 'auto' и т.д. */
+     /* Задайте прозрачность по необходимости */
+    z-index: -1; /* Это позволит изображению находиться позади содержимого блока */
+}
+  /* .section01MainTitle { 
+     
+    margin-bottom: 10px;
+    padding-top: calc(26px + (13) * ((100vw - 360px) / (1250 - 360)));
+     
+  } */
+  .section01MainBoxTitle {
+     
+    gap: 30px;
+  }
+  .section01NavLogo {
+     
+    width: fit-content;
+    min-width: fit-content;
+  }
+  .aboutProjectCont {
+    /* margin-left: adaptive-marginPh2(55,318.8); */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+  }
+  .joinExploreSection {
+    margin: 0px auto 11px;
+  }
+  .section01MainBtnPlayBoxBtn {    
+    font-size: 16px;
+    /* top: -6px;
+    left: -6px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+}
+@media (max-width:800px) {
+  .aboutProjectCont {
+    margin-left: auto;
+    margin-right: auto;
+   
+  }
+  .aboutProjectHeading {
+    text-align: center;
+  }
+  .joinExploreSection {
+    margin: 1px;
+  }
+  .joinExploreSectionMain {
+    margin-bottom: 9px;
+  }
+}
+@media (max-width:680px) {
+  .section01 {    
+    /* height: calc(2050px * 1vw/6.8px);    */
+    z-index: 1;
+     
+  }
+  .section01Nav {
+    align-items: baseline;
+  }
+  .section01NavBoxRight_mob {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 30px;
+    .playerInfoSection {
+      display: block;
+    }
+  }
+  .section01MainBoxTitle {
+    margin-top: 22px;
+  }
+  .aboutProjectCont {
+    margin-bottom: 150px;
+    width: 100%;
+  }
+  .aboutProjectHeading {
+    font-size: 32px;
+  }
+  .joinExploreSubtitle{
+    font-size: 18px;
+    /* width: max-content; */
+  }
+  .joinExploreSection {
+    justify-content: start;
+  }
+  .aboutProjectItems {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .aboutProjectItems {
+    gap: 0;
+  }
+  .aboutProjectBox {
+    margin-top: 14px;
+  }
+  .section01NavLogo {
+    font-size: 40px;
+  }
+  .playerInfoSection {
+    display: none;
+  }
+  .playerImage {
+    border-radius: 50%;
+    border: 1px solid #fefefe;
+    width: 40px;
+    height: 40px;
+  }
+  .section01NavLogo {
+    
+    margin-top: 7px;
+     
+}
+  .section01NavBox {
+    width: 50px;
+  }
+  .rectWhoWeAreSection {
+    height: auto;
+  }
+  .rectWhoWeAreSectionImg {
+    object-fit: contain;
+  }
+   
  
+}
+@media (max-width:600px) {
+  .joinExploreSectionMain {
+    overflow-x: scroll;
+  }
+   /* .joinExploreSectionMain::-webkit-scrollbar {
+    height: 0;
+     
+  } */
+  .joinExploreSection {
+    white-space: nowrap;
+  }
+}
+@media (max-width:580px) {
+  
+  .aboutProjectHeading {
+    font-size: 30px;
+  }
+  .section01MainSubtitle {
+    font-size: 16px;
+    width: 80%;
+  }
+  
+  
+}
+@media (max-width:568px) {
+  .section01MainBtnPlay {
+    margin-top: auto;
+    margin-bottom: 120px;
+  }
+  .aboutProjectCont {
+    margin-top: 0;
+  }
+  .section01MainBtnPlay {
+   
+    &:hover {
+      .section01MainBtnPlayBoxBtn {
+        top: 0;
+        left: 0;
+        background-color: #34D3D7;
+        path {
+          fill: #34D3D7;
+        }
+      }
+      
+    }
+  }
+  .section01MainBtnPlayBoxBtn {
+    z-index: 1;
+    width: 100%;
+    height: adaptive-marginMin(36,50);
+    font-size: 16px;
+    top: -6px;
+    left: -6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.section01MainBtnPlayBoxSvg {
+    width: 100%;
+    height: adaptive-marginMin(36,50);
+    margin-left: 0;
+}
+
+}
+
+@media (max-width:510px) {
+
+.aboutProjectBox {
+  margin-top: 10px;
+}
+}
+@media (max-width:480px) {
+  
+
+  .worldDescription, .aboutProjectBoxElementText {
+    font-size: 17px;
+}
+.aboutProjectItems {
+  gap: 0;
+}
+.rectWhoWeAreSection {
+  /* height: 420px;
+  margin-left: -15px;
+  width: calc(100% + 30px); */
+  border-radius: 0;
+  margin-left:-15px;
+  width: 100vw;
+}
+.worldDescription {
+  margin-top: 10px;
+}
+/* .rectWhoWeAreSectionImg {
+  object-position: left;
+} */
+}
+@media (max-width:380px) {
+  .section01NavLogo {
+    font-size: 34px;
+  }
+}
+@media (max-width:1000px) {
+  
+}
+@media (max-width:800px) {
+   
+}
+@media (max-width:680px) {
+   
+}
+@media (max-width:580px) {
+   
+}
+@media (max-width:480px) {
+   
+  
+}

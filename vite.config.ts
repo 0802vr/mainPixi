@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import nunjucksPlugin from './vite-plugin-nunjucks';
-import htmlTemplate from 'vite-plugin-html-template'
+
  
 export default defineConfig({
   plugins: [nunjucksPlugin()],
@@ -11,9 +11,10 @@ export default defineConfig({
     assetsDir:'./assets'
      
 },
-  assetsInclude: ['**/*.html'], 
+  
   css: {
     devSourcemap:true,
+     
     /* preprocessorOptions: {
       scss: {
         additionalData: `

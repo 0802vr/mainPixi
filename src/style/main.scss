@@ -20,13 +20,34 @@
   -moz-osx-font-smoothing: grayscale;
   cursor: url(../assets/cursor/1.png), auto;
 }
- 
+body::-webkit-scrollbar {
+  width: 11px; /* ширина скролл-бара */
+  background-color: #121212; 
+  cursor: url(../assets/cursor/1.png), auto;/* цвет фона полосы скролла */
+}
 
+body::-webkit-scrollbar-thumb {
+  width: 7px; /* ширина ползунка */
+  background-color: #34D3D7; /* синий цвет ползунка */
+  
+}
+
+/* Убираем ненужные стили по умолчанию для Firefox */
+/* body {
+  scrollbar-width: thin;  
+  scrollbar-color: #34D3D7 #121212;  
+} */
+html, body {
+  cursor: url(../assets/cursor/1.png), auto;
+}
 /* Курсор с указателем */
 a, button {
   cursor: url(../assets/cursor/2.png), auto;  /* Указываем координаты горячей точки */
 }
-
+.custom-scroll {
+  scrollbar-width: thin; /* Для Firefox */
+  scrollbar-color: #34D3D7 #121212; /* Цвет ползунка и фона */
+}
 
 /* button:focus,
 button:focus-visible {

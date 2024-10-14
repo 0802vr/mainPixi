@@ -86,6 +86,9 @@
         color:  #34D3D7;
         .section06LinkImg {
             rotate: -90deg;
+            rect {
+                fill: #34D3D7;
+            }
             path {
                 fill: #34D3D7;
             }
@@ -108,6 +111,9 @@
     width: adaptive-margin(18,24);
     height: adaptive-margin(18,24);
     path{
+        transition: all 0.4s linear;
+    }
+    rect{
         transition: all 0.4s linear;
     }
 }
@@ -140,9 +146,28 @@
     margin-top: adaptive-margin(10,12);
     cursor: url('../assets/cursor/1.png'), default;
 }
+.section06BoxSecondItemImg2_mob {
+    display: none;
+}
 @media (max-width:1250px) {
+    .section06 {
+        margin-bottom: calc(100px + (100) * ((100vw - 360px) / (1250 - 360)));
+    }
+    .section06BoxFirstItemElements {
+        width: 100%;
+    }
+    .section06BoxSecondItemImg2 img {
+        width: 100%;
+    }
     .section06BoxFirstTitle{
         font-size: 28px;
+        width: calc(256px + 150 * ((100vw - 800px) / (1250 - 800)));
+    }
+    .section06BoxSecondItemImg {
+        width: calc(256px + 150 * ((100vw - 800px) / (1250 - 800)));
+    }
+    .section06BoxFirstItems {
+        gap: 10px;
     }
     .section06Subtext {
         font-size: 32px;
@@ -157,4 +182,81 @@
     .section06BoxSecondText {
         font-size: 16px;
     }
+    .section06Link {
+        font-size: 20px;
+    }
+    .section06LinkImg {
+        height: 16px;
+        width: 16px;
+    }
+    .section06LinkBox {
+        margin-top: 10px;
+    }
+    .section06BoxLeft {
+        gap:10px;
+    }
+}
+@media (max-width:1000px) {
+    /* .section06BoxFirstTitle {
+        width: adaptive-marginPh2(55,318.8);
+    }  */ 
+}
+@media (max-width:950px) {
+    .section06BoxFirst {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .section06BoxFirstItemElements {
+        
+        
+        width: 100%;
+    }
+    .section06BoxLeft {
+        width: 60%;
+    }
+}
+@media (max-width:950px) {
+    .section06BoxSecondItemImg {
+        display: none;
+    }
+    .section06BoxFirstItemElements {
+        width: 100%;
+    }
+    .section06BoxSecondItemImg2 img {
+        width: 100%;
+    }
+}
+@media (max-width:680px) {
+    .section06BoxFirstItemElements {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .section06BoxLeft {
+        width: 100%;
+    }
+    .section06BoxRight {
+        width: 100%;
+    }
+    .section06BoxFirstTitle {
+        font-size: 24px;
+    }
+    .section06BoxSecond {
+        display: none;
+    }
+    .section06BoxSecondItemImg2_mob {
+        display: block;
+    }
+}
+@media (max-width:580px) {
+     
+    .section06Subtext {
+        font-size: 28px;
+    }
+    .section06Text {
+        font-size: 16px;
+    }
+}
+@media (max-width:480px) {
+   
+  
 }

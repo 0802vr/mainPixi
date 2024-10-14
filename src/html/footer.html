@@ -39,25 +39,64 @@
         </div>
         <div class="footerRight">
           <div class="footerRightBoxStart">
-            <h3 class="footerRightBoxTitle">Personal</h3>
-            <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Staking</a>
-            <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Auction</a>
-            <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Battle Pass</a>
-            <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Leader board</a>
-            <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Support</a>
+            <input type="checkbox" id="togglePersonal">
+            <label for="togglePersonal" class="footerRightBoxTitle">Personal
+               <img class="footerImageTrial" src="./assets/62edd54fd0033f9609cdd2476f697007.svg" alt="alt text" />
+            </label>
+            <!-- <h3 class="footerRightBoxTitle">Personal</h3> -->
+            <div class="footerBoxLinks">
+              <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Staking</a>
+              <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Auction</a>
+              <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Battle Pass</a>
+              <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Leader board</a>
+              <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Support</a>
+            </div>
+            
           </div>
           <div class="footerRightBoxCenter">
-            <h3 class="footerRightBoxTitle">Explore</h3>
-            <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">White paper</a>
-            <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Blog</a>
-            <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Contact</a>
+            <input type="checkbox" id="toggleExplore">
+            <label for="toggleExplore" class="footerRightBoxTitle">Explore
+              <img class="footerImageTrial" src="./assets/62edd54fd0033f9609cdd2476f697007.svg" alt="alt text" />
+            </label>
+            <!-- <h3 class="footerRightBoxTitle">Explore</h3> -->
+            <div class="footerBoxLinks">
+              <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">White paper</a>
+              <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Blog</a>
+              <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Contact</a>
+            </div>
           </div>
           <div class="footerRightBoxEnd">
-            <h3 class="footerRightBoxTitle">Collections</h3>
-            <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Skins</a>
-            <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Weapons</a>
-            <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Lands</a>
+            <input type="checkbox" id="toggleCollections">
+            <label for="toggleCollections" class="footerRightBoxTitle">Collections
+              <img class="footerImageTrial" src="./assets/62edd54fd0033f9609cdd2476f697007.svg" alt="alt text" />
+            </label>
+            <div class="footerBoxLinks">
+              <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Skins</a>
+              <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Weapons</a>
+              <a href="#" class="footerRightBoxLink"><img class="footerLinkIcon" src="./assets/footer/icon.png" alt="icon">Lands</a>
+            </div>
           </div>
+          <div class="footerLogoConnect_mob">
+            <p class="footerLogoText">Social media</p>
+            <div class="footerLogoConnect">
+              <div class="footerLogoConnectBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M0 0.0374994C0 0.0562496 1.3824 2.0375 3.0656 4.43125C4.7552 6.83125 6.144 8.81875 6.1568 8.85625C6.1696 8.8875 4.7936 10.4875 3.104 12.4C1.4144 14.3188 0.0256 15.9125 0.0128 15.9437C0 15.975 0.32 16 0.7232 16H1.4592L4.16 12.9375C5.6448 11.2562 6.8672 9.875 6.88 9.875C6.8928 9.875 7.8656 11.2562 9.0496 12.9375L11.2064 16H13.6064C14.9952 16 16 15.975 16 15.9437C16 15.9125 14.6112 13.9062 12.9088 11.4875C11.2064 9.075 9.7664 7.01875 9.7024 6.925L9.5936 6.7625L10.0288 6.26875C10.272 6 11.616 4.48125 13.0112 2.8875L15.5584 0H14.7968H14.0288L11.5456 2.825C10.176 4.375 9.024 5.6875 8.9856 5.7375C8.9344 5.80625 8.4864 5.20625 6.8736 2.9125L4.832 0.00624943L2.4192 0C1.088 0 0 0.0187502 0 0.0374994ZM8.992 7.94375C11.7056 11.7312 13.9456 14.8687 13.9712 14.9187C14.016 14.9875 13.856 15 12.9856 14.9875L11.9424 14.9688L10.4 12.8125C9.5552 11.625 7.3152 8.5 5.4272 5.85625L1.9904 1.0625H3.0272H4.064L8.992 7.94375Z" fill="#FEFEFE"/>
+                </svg>
+              </div>
+              <div class="footerLogoConnectBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                  <path d="M18.3778 0.0258837C18.3312 0.0386438 18.0088 0.157736 17.6568 0.293839C8.95326 3.65392 1.22529 6.64822 1.08532 6.72053C0.669659 6.93319 0.5 7.13735 0.5 7.41381C0.5 7.61796 0.690866 7.83063 0.979287 7.94547C1.27619 8.06456 5.39891 9.3533 5.48374 9.3533C5.51767 9.3533 7.79534 7.93271 10.5438 6.19737C13.2881 4.46204 15.6251 3.00742 15.7311 2.96064C15.9432 2.87132 16.151 2.88833 16.151 2.99466C16.151 3.02444 16.1086 3.101 16.0577 3.16054C16.0026 3.21583 14.1576 4.89587 11.952 6.89066C9.74642 8.88544 7.93955 10.5485 7.93531 10.5825C7.92258 10.6548 7.62568 14.8868 7.62568 14.9634C7.62568 15.0314 7.90138 15.0186 8.06679 14.9506C8.22373 14.8825 8.6097 14.538 9.8058 13.3811L10.6329 12.5815L12.796 14.1808C13.9879 15.0612 15.0695 15.8268 15.1967 15.8863C15.6039 16.0735 16.0238 16.0267 16.2656 15.7672C16.4946 15.5205 16.554 15.2781 18.0343 8.26021C19.6588 0.570302 19.6121 0.855271 19.3831 0.417185C19.2346 0.132215 19.0013 -0.00814247 18.679 0.000364304C18.5602 0.00461769 18.4245 0.0173779 18.3778 0.0258837Z" fill="#FEFEFE"/>
+                </svg>
+              </div>
+              <div class="footerLogoConnectBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                  <path d="M6.35092 0.642766C5.48672 0.834849 4.48697 1.14385 3.64819 1.48626C3.08054 1.7201 2.99581 1.78691 2.6908 2.2546C2.14856 3.06469 1.13187 5.19431 0.809912 6.15472C0.46254 7.20701 0.208365 8.38456 0.0897505 9.50366C-0.0119193 10.4056 -0.0288643 12.0926 0.0473881 12.6939C0.106695 13.0697 0.12364 13.0948 0.835329 13.5625C2.33496 14.5396 4.91059 15.6503 5.22408 15.4499C5.35963 15.3664 6.26619 13.955 6.26619 13.8297C6.26619 13.7963 5.90187 13.5959 5.4613 13.3871C5.02074 13.1783 4.65642 12.9862 4.65642 12.9612C4.65642 12.9361 4.73267 12.8776 4.82587 12.8275C4.95296 12.7607 5.10546 12.7858 5.52061 12.9528C6.37633 13.3036 7.89291 13.6543 8.98586 13.7629C10.6719 13.9216 12.7392 13.6293 14.3489 12.9946C14.8573 12.8025 15.0352 12.7607 15.1623 12.8275C15.2555 12.8776 15.3317 12.9361 15.3317 12.9612C15.3317 12.9862 14.9674 13.1783 14.5269 13.3787C14.0863 13.5875 13.722 13.7712 13.722 13.7963C13.722 13.8798 14.01 14.3893 14.3659 14.9321C14.637 15.3497 14.781 15.5 14.9166 15.5C15.1877 15.5 16.95 14.7901 17.7888 14.3475C18.187 14.1387 18.8224 13.7629 19.2037 13.5207L19.8899 13.0697L19.9577 12.4267C20.1102 10.7898 19.8391 8.33445 19.3223 6.6057C18.6869 4.50949 17.3397 1.97065 16.6958 1.63659C15.7215 1.1522 12.9425 0.392222 12.7392 0.559251C12.6799 0.60936 12.5443 0.851552 12.4426 1.09374L12.2562 1.54472L11.8665 1.48626C11.3666 1.4111 8.63001 1.4111 8.13014 1.48626L7.74888 1.54472L7.4947 1.02693C7.35914 0.742983 7.20664 0.509143 7.1558 0.500791C7.11344 0.492439 6.74912 0.5509 6.35092 0.642766ZM7.51165 7.07338C8.16403 7.47425 8.56223 8.40962 8.40126 9.13619C8.10472 10.4223 6.87621 11.057 5.86798 10.439C5.03768 9.92123 4.71573 8.77708 5.1563 7.87512C5.36811 7.44085 5.83409 7.01492 6.22383 6.898C6.58814 6.78943 7.17275 6.8646 7.51165 7.07338ZM13.7474 6.90635C14.1371 7.01492 14.6116 7.40744 14.8149 7.80831C15.4843 9.09444 14.637 10.6812 13.2899 10.6729C12.8154 10.6645 12.5104 10.5225 12.1376 10.1384C11.0362 9.01092 11.7564 6.8813 13.256 6.82284C13.3492 6.81449 13.5695 6.85625 13.7474 6.90635Z" fill="#FEFEFE"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
         </div>
     </div>
     <div class="footerRow  sectionMainMargin">
