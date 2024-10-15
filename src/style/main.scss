@@ -16,8 +16,8 @@
   background-color: #242424;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
   cursor: url(../assets/cursor/1.png), auto;
 }
 body::-webkit-scrollbar {
@@ -91,7 +91,7 @@ main {
   display: flex;
   flex-direction: column;
   height: 120px;
-  margin-top: -120px;
+  margin-top: -118px;
   z-index: 2;
 }
 .track {
@@ -106,8 +106,8 @@ main {
 .pixel {
   width: 2%;
   aspect-ratio: 1 / 1;
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: #121212;
+  border: 1px solid #121212;
   opacity: 0;
   transition: all 0.2s linear;
 }

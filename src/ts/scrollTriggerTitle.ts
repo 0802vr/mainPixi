@@ -18,7 +18,7 @@ ScrollTrigger.create({
     trigger: heading,
     start: "-200 60%",
     end: "200 45%",
-    markers: true, // Уберите это в продакшене
+    /* markers: true, */ // Уберите это в продакшене
 
     onUpdate: (self) => {
         const progress = self.progress;
@@ -68,7 +68,7 @@ ScrollTrigger.create({
     trigger: heading2,
     start: "-100 60%",
     end: "100 45%",
-    markers: true, // Уберите это в продакшене
+    /* markers: true, */ // Уберите это в продакшене
 
     onUpdate: (self) => {
         const progress = self.progress;
@@ -118,7 +118,7 @@ ScrollTrigger.create({
     trigger: heading3,
     start: "-100 60%",
     end: "100 45%",
-    markers: true, // Уберите это в продакшене
+    /* markers: true, */ // Уберите это в продакшене
 
     onUpdate: (self) => {
         const progress = self.progress;
@@ -168,7 +168,7 @@ ScrollTrigger.create({
     trigger: heading4,
     start: "-100 60%",
     end: "100 45%",
-    markers: true, // Уберите это в продакшене
+    /* markers: true, */ // Уберите это в продакшене
 
     onUpdate: (self) => {
         const progress = self.progress;
@@ -218,7 +218,7 @@ ScrollTrigger.create({
     trigger: heading6,
     start: "-100 60%",
     end: "100 45%",
-    markers: true, // Уберите это в продакшене
+    /* markers: true, */ // Уберите это в продакшене
 
     onUpdate: (self) => {
         const progress = self.progress;
@@ -268,7 +268,7 @@ ScrollTrigger.create({
     trigger: heading8,
     start: "-100 60%",
     end: "100 45%",
-    markers: true, // Уберите это в продакшене
+    /* markers: true, */ // Уберите это в продакшене
 
     onUpdate: (self) => {
         const progress = self.progress;
@@ -318,7 +318,7 @@ ScrollTrigger.create({
     trigger: heading9,
     start: "-100 60%",
     end: "100 45%",
-    markers: true, // Уберите это в продакшене
+    /* markers: true, */ // Уберите это в продакшене
 
     onUpdate: (self) => {
         const progress = self.progress;

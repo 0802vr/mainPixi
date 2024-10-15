@@ -5,6 +5,7 @@ import gsap from 'gsap';
  
 import {playerBurgerText} from './ts/playerBurger'; 
 import { scrollTriggerTitle } from './ts/scrollTriggerTitle';
+import { scrollText } from './ts/scrollText';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -942,6 +943,7 @@ body.addEventListener('mouseleave', () => {
 }); */
  
 scrollTriggerTitle()
+scrollText()
 
 
 
