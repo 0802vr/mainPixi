@@ -7,15 +7,22 @@
   src: url("../font/Fifaks10Dev1.ttf");
    
 }
+@font-face {
+  font-family: 'Fairfax';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../font/Fairfax.ttf");
+   
+}
 :root {
-  font-family:Fifacks, Rubik, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family:Fifacks, Rubik, Fairfax;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
+  /* color-scheme: light dark; */
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  /* font-synthesis: none;
+  text-rendering: optimizeLegibility; */
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
   cursor: url(../assets/cursor/1.png), auto;
@@ -117,3 +124,19 @@ main {
 }
 .track-4 {
 }
+/* #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #21222D;
+  z-index: 9999;  
+}
+
+#content {
+  display: none;  
+} */

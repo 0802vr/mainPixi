@@ -404,7 +404,7 @@
 .section01MainTitle {
   cursor: url('../assets/cursor/1.png'), default;
   text-transform: uppercase;
-   
+  display: flex;
   font-weight: 400;
   font-family: $fontF;
   font-size: adaptive-margin(280, 380);
@@ -550,7 +550,7 @@ margin-bottom: adaptive-margin(197, 335);
   transition: all 0.4s ease-in-out;
 }
 .rectWhoWeAreSectionImg {
-  flex:1;
+  flex: 1;
   height: 100%;
   width:100%;
   object-fit: cover;
@@ -958,6 +958,11 @@ margin-bottom: adaptive-margin(197, 335);
   .joinExploreSectionMain {
     overflow-x: scroll;
   }
+  
+  .joinExploreSectionMain::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
    /* .joinExploreSectionMain::-webkit-scrollbar {
     height: 0;
      
@@ -1029,7 +1034,9 @@ margin-bottom: adaptive-margin(197, 335);
 }
 @media (max-width:480px) {
   
-
+  .section01 {
+    height: 1650px;
+  }
   .worldDescription, .aboutProjectBoxElementText {
     font-size: 17px;
 }
@@ -1041,8 +1048,9 @@ margin-bottom: adaptive-margin(197, 335);
   margin-left: -15px;
   width: calc(100% + 30px); */
   border-radius: 0;
-  margin-left:-15px;
+  /* margin-left:-15px;
   width: 100vw;
+  border-right: 2px solid #404040; */
 }
 .worldDescription {
   margin-top: 10px;
@@ -1056,6 +1064,33 @@ margin-bottom: adaptive-margin(197, 335);
     font-size: 34px;
   }
 }
+
+
+@media (min-height:900px) and (max-height:1000px) and (max-width:450px){
+  .section01 {
+    height: 1550px;
+  }
+  
+}
+@media (min-height:800px) and (max-height:900px) and (max-width:450px){
+  .section01 {
+    height: 1450px;
+  }
+  
+}
+/* @media (min-height:480px) and (max-width:420px) {
+  .section01 {
+    height: 1370px;
+  }
+  
+} */
+@media (min-height:480px) and (max-width:380px) {
+  .section01 {
+    height: 1300px;
+  }
+  
+}
+
 @media (max-width:1000px) {
   
 }

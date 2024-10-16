@@ -16,9 +16,9 @@ text.split('').forEach((letter) => {
 
 ScrollTrigger.create({
     trigger: heading,
-    start: "-200 60%",
-    end: "200 45%",
-    /* markers: true, */ // Уберите это в продакшене
+    start: "-200 80%",
+    end: "0 75%",
+    markers: true, // Уберите это в продакшене
 
     onUpdate: (self) => {
         const progress = self.progress;
@@ -66,9 +66,9 @@ text2.split('').forEach((letter) => {
 
 ScrollTrigger.create({
     trigger: heading2,
-    start: "-100 60%",
-    end: "100 45%",
-    /* markers: true, */ // Уберите это в продакшене
+    start: "-200 80%",
+    end: "0 75%",
+    markers: true, // Уберите это в продакшене
 
     onUpdate: (self) => {
         const progress = self.progress;
@@ -116,9 +116,9 @@ text3.split('').forEach((letter) => {
 
 ScrollTrigger.create({
     trigger: heading3,
-    start: "-100 60%",
-    end: "100 45%",
-    /* markers: true, */ // Уберите это в продакшене
+    start: "-200 80%",
+    end: "0 75%",
+    markers: true, // Уберите это в продакшене
 
     onUpdate: (self) => {
         const progress = self.progress;
@@ -166,9 +166,9 @@ text4.split('').forEach((letter) => {
 
 ScrollTrigger.create({
     trigger: heading4,
-    start: "-100 60%",
-    end: "100 45%",
-    /* markers: true, */ // Уберите это в продакшене
+    start: "-200 80%",
+    end: "0 75%",
+    markers: true, // Уберите это в продакшене
 
     onUpdate: (self) => {
         const progress = self.progress;
@@ -216,9 +216,9 @@ text6.split('').forEach((letter) => {
 
 ScrollTrigger.create({
     trigger: heading6,
-    start: "-100 60%",
-    end: "100 45%",
-    /* markers: true, */ // Уберите это в продакшене
+    start: "-200 80%",
+    end: "0 75%",
+    markers: true, // Уберите это в продакшене
 
     onUpdate: (self) => {
         const progress = self.progress;
@@ -266,9 +266,9 @@ text8.split('').forEach((letter) => {
 
 ScrollTrigger.create({
     trigger: heading8,
-    start: "-100 60%",
-    end: "100 45%",
-    /* markers: true, */ // Уберите это в продакшене
+    start: "-200 80%",
+    end: "0 75%",
+    markers: true, // Уберите это в продакшене
 
     onUpdate: (self) => {
         const progress = self.progress;
@@ -316,9 +316,9 @@ text9.split('').forEach((letter) => {
 
 ScrollTrigger.create({
     trigger: heading9,
-    start: "-100 60%",
-    end: "100 45%",
-    /* markers: true, */ // Уберите это в продакшене
+    start: "-200 80%",
+    end: "0 75%",
+    markers: true, // Уберите это в продакшене
 
     onUpdate: (self) => {
         const progress = self.progress;
@@ -364,7 +364,7 @@ const animateHeading = (heading: Element, delay: number) => {
         const span = document.createElement('span');
         span.textContent = letter;
 
-        span.style.opacity = '0'; // Устанавливаем начальную прозрачность на 0
+        span.style.display = 'none'; // Устанавливаем начальную прозрачность на 0
         heading.appendChild(span);
     });
 
@@ -372,7 +372,7 @@ const animateHeading = (heading: Element, delay: number) => {
     const spans = heading.querySelectorAll('span');
     spans.forEach((span, index) => {
         gsap.to(span, {
-            opacity: 1,
+            display: 'block',
             duration: 0.4,
             delay: index * 0.1 + delay, // задержка для каждой буквы
             ease: "power1.out"

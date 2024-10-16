@@ -5,7 +5,18 @@ import gsap from 'gsap';
  
 import {playerBurgerText} from './ts/playerBurger'; 
 import { scrollTriggerTitle } from './ts/scrollTriggerTitle';
-import { scrollText } from './ts/scrollText';
+/* import { scrollText } from './ts/scrollText'; */
+/* 
+window.onload = function() {
+    setTimeout(()=> {
+// Скрыть прелоадер
+    document.getElementById("preloader")!.style.display = "none";
+        
+    // Показать контент страницы
+    document.getElementById("content")!.style.display = "block";
+    }, 500)
+    
+} */
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -943,7 +954,7 @@ body.addEventListener('mouseleave', () => {
 }); */
  
 scrollTriggerTitle()
-scrollText()
+/* scrollText() */
 
 
 
